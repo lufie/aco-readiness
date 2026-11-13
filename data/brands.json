@@ -1,0 +1,221 @@
+{
+  "www.ulanzi.com": {
+    "slug": "ulanzi-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/ulanzi-com/"
+  },
+  "jadens.com": {
+    "slug": "jadens-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/jadens-com/"
+  },
+  "keychron.com": {
+    "slug": "keychron-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/keychron-com/"
+  },
+  "ybtoner.com": {
+    "slug": "ybtoner-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/ybtoner-com/"
+  },
+  "www.printedsolid.com": {
+    "slug": "printedsolid-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/printedsolid-com/"
+  },
+  "voxelpla.com": {
+    "slug": "voxelpla-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/voxelpla-com/"
+  },
+  "shop.polymaker.com": {
+    "slug": "us-polymaker-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/us-polymaker-com/"
+  },
+  "www.branchfurniture.com": {
+    "slug": "branchfurniture-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/branchfurniture-com/"
+  },
+  "fifinemicrophone.com": {
+    "slug": "fifinemicrophone-com",
+    "score": 45,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 0,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/fifinemicrophone-com/"
+  },
+  "fanttik.com": {
+    "slug": "fanttik-com",
+    "score": 53,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/fanttik-com/"
+  },
+  "ipitaka.com": {
+    "slug": "ipitaka-com",
+    "score": 53,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/ipitaka-com/"
+  },
+  "www.maono.com": {
+    "slug": "maono-com",
+    "score": 53,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/maono-com/"
+  },
+  "bougerv.com": {
+    "slug": "bougerv-com",
+    "score": 55,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/bougerv-com/"
+  },
+  "emeet.com": {
+    "slug": "emeet-com",
+    "score": 55,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/emeet-com/"
+  },
+  "www.deathwishcoffee.com": {
+    "slug": "deathwishcoffee-com",
+    "score": 56,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/deathwishcoffee-com/"
+  },
+  "pospaper.com": {
+    "slug": "pospaper-com",
+    "score": 57,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/pospaper-com/"
+  },
+  "linfordoffice.com": {
+    "slug": "linfordoffice-com",
+    "score": 59,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/linfordoffice-com/"
+  },
+  "munbyn.com": {
+    "slug": "munbyn-com",
+    "score": 60,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/munbyn-com/"
+  },
+  "trueimagetech.com": {
+    "slug": "trueimagetech-com",
+    "score": 60,
+    "missing_gtin_pct": 100.0,
+    "products_sampled": 15,
+    "issues": [
+      "100.0% 的抽样 SKU 缺失公开条码 (GTIN/Barcode)，在 ChatGPT/Perplexity 同品聚合排序中极易被降权或漏召回",
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/trueimagetech-com/"
+  },
+  "epomaker.com": {
+    "slug": "epomaker-com",
+    "score": 80,
+    "missing_gtin_pct": 0.0,
+    "products_sampled": 1,
+    "issues": [
+      "商品页 JSON-LD 缺失机器可读的 OfferShippingDetails（预计送达时效）或 MerchantReturnPolicy（退换货规则），当美区买家限定送达时间时会被 AI 直接过滤"
+    ],
+    "report_url": "./r/epomaker-com/"
+  }
+}

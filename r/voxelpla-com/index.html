@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>voxelpla.com — ChatGPT 导购截流实测 (45/100) | ACO Studio</title>
+  <meta property="og:title" content="voxelpla.com — Live ChatGPT Shopping Audit (45/100)"/>
+  <meta property="og:description" content="See who wins the #1 ChatGPT Shopping card in your category—and claim a Free 1-SKU Live Proof in 24h."/>
+  <meta property="og:image" content="https://lufie.github.io/aco-readiness/cards/voxelpla-com.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://lufie.github.io/aco-readiness/cards/voxelpla-com.png"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#09090b",
+            "surface": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f3",
+            "surface-container": "#eeeeee",
+            "on-surface": "#1a1c1c",
+            "on-surface-variant": "#52525b",
+            "outline-variant": "#e4e4e7"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "code-sm": ["JetBrains Mono", "monospace"],
+            "code-lg": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html[data-lang="zh"] .lang-en { display: none !important; }
+    html[data-lang="en"] .lang-zh { display: none !important; }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .bg-dot-matrix {
+      background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .scanner-sweep {
+      animation: scanSweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes scanSweep {
+      0%, 100% { top: 4%; opacity: 0.95; }
+      50% { top: 94%; opacity: 0.95; }
+    }
+
+    /* Native Range Slider (modern-web-guidance: slider) */
+    input[type="range"] {
+      accent-color: #09090b;
+    }
+    input[type="range"]:focus-visible {
+      outline: 2px solid #09090b;
+      outline-offset: 4px;
+    }
+
+    /* Native Modal Dialog + Scroll Containment (modern-web-guidance: dialog + light-dismiss-a-dialog) */
+    dialog:modal {
+      overscroll-behavior: contain;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #e4e4e7;
+      border-radius: 1rem;
+      box-shadow: 0 24px 48px -12px rgba(9, 9, 11, 0.28);
+      max-width: 28rem;
+      width: calc(100% - 2rem);
+      background: #ffffff;
+      color: #09090b;
+    }
+    dialog::backdrop {
+      overflow: hidden;
+      overscroll-behavior: contain;
+      background-color: rgba(9, 9, 11, 0.55);
+      backdrop-filter: blur(3px);
+    }
+
+    /* Responsive Table (modern-web-guidance: responsive-table) */
+    .aco-table-region {
+      overflow: auto;
+      max-inline-size: 100%;
+      max-block-size: min(640px, 82vh);
+      container-type: inline-size;
+    }
+    .aco-table-region:focus-visible {
+      outline: 2px solid #09090b;
+      outline-offset: 2px;
+    }
+    .aco-table-region table {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .aco-table-region thead {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 2;
+    }
+    .aco-table-region tbody th {
+      position: sticky;
+      inset-inline-start: 0;
+      background: #ffffff;
+      z-index: 1;
+    }
+    @container (width < 600px) {
+      .aco-table-region table,
+      .aco-table-region thead,
+      .aco-table-region tbody,
+      .aco-table-region tr,
+      .aco-table-region th,
+      .aco-table-region td {
+        display: block;
+      }
+      .aco-table-region thead {
+        display: none;
+      }
+      .aco-table-region tbody tr {
+        margin-block-end: 0.75rem;
+        border-bottom: 1px solid #e4e4e7;
+        padding: 0.75rem 1rem;
+      }
+      .aco-table-region tbody th {
+        position: sticky;
+        inset-block-start: 0;
+        z-index: 2;
+        background: #f9f9f9;
+        padding: 0.35rem 0.5rem !important;
+        border-radius: 0.375rem;
+      }
+      .aco-table-region table {
+        --label-2: "Category";
+        --label-3: "AI Score";
+        --label-4: "GTIN Gap";
+        --label-5: "Action";
+      }
+      .aco-table-region tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.4rem 0 !important;
+        border: 0 !important;
+      }
+      .aco-table-region td:nth-child(2)::before { content: var(--label-2) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+      .aco-table-region td:nth-child(3)::before { content: var(--label-3) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+      .aco-table-region td:nth-child(4)::before { content: var(--label-4) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+      .aco-table-region td:nth-child(5)::before { content: var(--label-5) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+    }
+
+    /* Form Validation After Interaction (modern-web-guidance: validate-input-after-interaction) */
+    .error-msg { display: none; color: #dc2626; font-size: 0.75rem; margin-top: 0.375rem; }
+    :is(:user-invalid, .user-invalid-fallback) {
+      border-color: #dc2626 !important;
+      background-color: #fef2f2 !important;
+    }
+    .input-wrap:has(:is(:user-invalid, .user-invalid-fallback)) + .error-msg,
+    :is(:user-invalid, .user-invalid-fallback) + .error-msg {
+      display: block;
+    }
+    input:user-valid { border-color: #059669 !important; }
+    .visually-hidden:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    /* Compact Auto-Hiding Sticky Top Bar (modern-web-guidance: content-first-noise-reduction) */
+    html {
+      container-type: scroll-state;
+    }
+    .top-bar {
+      transition: transform 0.22s ease;
+    }
+    @container scroll-state((scrolled: bottom) and (scrollable: top)) {
+      .top-bar {
+        transform: translateY(-100%);
+      }
+    }
+    .top-bar:focus-within,
+    .top-bar.is-visible {
+      transform: none;
+    }
+    .top-bar.is-hidden:not(:focus-within) {
+      transform: translateY(-100%);
+    }
+    :target {
+      scroll-margin-top: 4.25rem;
+    }
+
+    /* Accessible Details Accordion (modern-web-guidance: accordion) */
+    summary.aco-summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.65ch;
+      cursor: pointer;
+    }
+    summary.aco-summary::-webkit-details-marker {
+      display: none;
+    }
+    summary.aco-summary::before {
+      content: "";
+      inline-size: 1em;
+      block-size: 1em;
+      flex-shrink: 0;
+      background-color: currentColor;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat center / contain;
+      rotate: -90deg;
+    }
+    details.aco-item[open] > summary.aco-summary::before {
+      rotate: 0deg;
+    }
+    details.aco-item::details-content {
+      interpolate-size: allow-keywords;
+      overflow: clip;
+      contain: layout;
+    }
+    details.aco-item:not([open])::details-content {
+      block-size: 0;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      summary.aco-summary::before {
+        transition: rotate 0.2s;
+      }
+      details.aco-item::details-content {
+        transition: block-size 0.25s ease-in-out, content-visibility 0.25s ease-in-out, display 0.25s ease-in-out;
+        transition-behavior: allow-discrete;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#fafafa] text-on-surface font-body-md antialiased selection:bg-black selection:text-white bg-dot-matrix">
+  <!-- STICKY HEADER -->
+  <header class="top-bar sticky top-0 z-40 flex items-center justify-between w-full h-14 px-4 md:px-10 border-b border-outline-variant bg-white/90 backdrop-blur-md">
+    <a href="../../" class="flex items-center gap-2.5">
+      <div class="w-7 h-7 bg-primary flex items-center justify-center rounded-md">
+        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <span class="font-bold text-base tracking-tight text-primary">ACO Studio</span>
+      <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded border border-red-200 bg-red-50 font-code-sm text-[11px] font-bold text-red-700">
+        voxelpla.com · 45/100
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6 text-xs font-medium">
+      <a class="text-primary font-semibold" href="#simulator">
+        <span class="lang-zh">竞品截流实测</span><span class="lang-en">Hijack Simulator</span>
+      </a>
+      <a class="text-on-surface-variant hover:text-primary" href="#xray">
+        <span class="lang-zh">X-Ray 与漏单金额</span><span class="lang-en">X-Ray &amp; Lost ROI</span>
+      </a>
+      <a class="text-on-surface-variant hover:text-primary" href="../../delivery-demo/">
+        <span class="lang-zh">7天无损方案</span><span class="lang-en">How Delivery Works</span>
+      </a>
+      <a class="text-emerald-700 font-semibold hover:opacity-80" href="../../partners/">
+        <span class="lang-zh">渠道合伙 30% 分润</span><span class="lang-en">30% Agency Partner</span>
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-2.5">
+      <div class="flex items-center border border-outline-variant rounded-md bg-surface-container-low p-0.5 font-code-sm text-xs">
+        <button type="button" id="btn-zh" onclick="setLang('zh')" class="px-2 py-0.5 text-on-surface-variant hover:text-primary">中文</button>
+        <button type="button" id="btn-en" onclick="setLang('en')" class="px-2 py-0.5 bg-white text-primary rounded font-semibold shadow-sm">EN</button>
+      </div>
+      <button type="button" onclick="openBooking('¥0 免费领 Voxelpla 1款爆款打样', 'Free 1-SKU Proof for Voxelpla', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-primary text-white hover:bg-neutral-800 transition-all text-xs font-semibold shadow-sm cursor-pointer">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="lang-zh">免费领 1 款打样 →</span>
+        <span class="lang-en">Free 1-SKU Proof →</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. OUTCOME-FIRST HERO: SCORE JUMP + INTERACTIVE CHATGPT BUYER SIMULATOR -->
+  <section class="pt-8 md:pt-12 pb-12 px-4 md:px-10 max-w-7xl mx-auto border-b border-outline-variant" id="simulator">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Left: Short Commercial Wake-Up Call -->
+      <div class="lg:col-span-5 space-y-5">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-red-300 bg-red-50">
+          <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+          <span class="font-code-sm text-xs font-bold text-red-700 lang-zh">实测 45/100 · AI 导购首屏正被竞品截流</span>
+          <span class="font-code-sm text-xs font-bold text-red-700 lang-en">Live Score 45/100 · Rivals Winning AI Picks</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight leading-[1.15]">
+          <span class="lang-zh">买家问 ChatGPT 买什么时，voxelpla.com 正在白白丢单</span>
+          <span class="lang-en">When Buyers Ask ChatGPT What to Buy, voxelpla.com Loses Free Orders</span>
+        </h1>
+
+        <!-- Visual Score Jump Pill -->
+        <div class="bg-white border border-outline-variant rounded-2xl p-4 flex items-center justify-between shadow-sm">
+          <div>
+            <span class="font-code-sm text-[11px] text-on-surface-variant block"><span class="lang-zh">当前实测得分</span><span class="lang-en">Current Score</span></span>
+            <span class="font-code-lg text-3xl font-extrabold text-red-600">45</span>
+            <span class="font-code-sm text-xs text-red-600 block"><span class="lang-zh">缺条码 100.0%</span><span class="lang-en">100.0% No GTIN</span></span>
+          </div>
+          <div class="flex flex-col items-center px-3">
+            <span class="font-code-sm text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-semibold">7 DAYS · 0 PIXEL DIFF</span>
+            <span class="text-xl font-bold text-primary mt-1">━━━▶</span>
+          </div>
+          <div class="text-right">
+            <span class="font-code-sm text-[11px] text-on-surface-variant block"><span class="lang-zh">无损挂载后</span><span class="lang-en">After ACO Fix</span></span>
+            <span class="font-code-lg text-3xl font-extrabold text-emerald-600">96+</span>
+            <span class="font-code-sm text-xs text-emerald-700 block"><span class="lang-zh">首屏直推购买卡</span><span class="lang-en">#1 Direct Card</span></span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2">
+          <button type="button" onclick="openBooking('¥0 免费领 Voxelpla 1款爆款打样', 'Free 1-SKU Proof for Voxelpla', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="flex-1 inline-flex justify-center items-center gap-2 px-4 py-3 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-neutral-800 transition-all shadow-sm cursor-pointer">
+            <span class="lang-zh">¥0 免费领 1 款打样 →</span>
+            <span class="lang-en">Free 1-SKU Proof →</span>
+          </button>
+          <a href="../../cards/voxelpla-com.png" download="voxelpla-com-chatgpt-audit.png" class="inline-flex justify-center items-center gap-1 px-3 py-3 rounded-xl bg-white text-primary border border-outline-variant hover:border-primary text-xs font-semibold transition-all">
+            <span class="material-symbols-outlined text-base">download</span>
+            <span class="lang-zh">保存截流图</span>
+            <span class="lang-en">Save Card</span>
+          </a>
+          <button type="button" onclick="copyShareBrief(this)" class="inline-flex justify-center items-center gap-1 px-3 py-3 rounded-xl bg-white text-primary border border-outline-variant hover:border-primary text-xs font-semibold transition-all cursor-pointer">
+            <span class="material-symbols-outlined text-base">share</span>
+            <span class="lang-zh">复制给合伙人</span>
+            <span class="lang-en">Share</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Brand-Customized Interactive ChatGPT Shopping Simulator -->
+      <div class="lg:col-span-7">
+        <div class="bg-white border-2 border-primary rounded-2xl overflow-hidden shadow-lg">
+          <div class="bg-surface-container-low px-4 py-3 border-b border-outline-variant flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+              <span class="text-xs font-code-sm font-semibold text-primary ml-1">ChatGPT Shopping · 买家实机模拟</span>
+            </div>
+
+            <div class="inline-flex p-0.5 rounded-lg border border-outline-variant bg-white text-xs font-code-sm">
+              <button type="button" id="toggleBefore" onclick="switchSim('before')" class="px-2.5 py-1 rounded-md bg-red-600 text-white font-semibold shadow-sm transition-all cursor-pointer">
+                <span class="lang-zh">🔴 当前现状：被竞品截流</span><span class="lang-en">🔴 Now: Rival Hijacks</span>
+              </button>
+              <button type="button" id="toggleAfter" onclick="switchSim('after')" class="px-2.5 py-1 rounded-md text-emerald-800 bg-emerald-50 hover:bg-emerald-100 font-semibold transition-all cursor-pointer">
+                <span class="lang-zh">🟢 点看 7天后霸榜第 1 ✨</span><span class="lang-en">🟢 Preview #1 After 7d ✨</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Buyer Prompt -->
+          <div class="px-4 py-3 bg-[#fafafa] border-b border-outline-variant flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold shrink-0">B</span>
+            <div class="bg-white border border-outline-variant rounded-lg px-3 py-1.5 text-xs text-primary font-medium flex-1">
+              <span class="lang-zh">“适配拓竹 500mm/s 高速打印不堵头的高性价比 PLA+ 耗材，美区 3 日达”</span>
+              <span class="lang-en">“Best high-speed 500mm/s PLA+ filament for Bambu printers under $20 with fast US shipping”</span>
+            </div>
+          </div>
+
+          <!-- Simulator Screen -->
+          <div class="p-5 bg-white min-h-[290px] flex flex-col justify-between">
+            <!-- BEFORE STATE (Default active on diagnostic report to show urgent leak!) -->
+            <div id="simBeforeState" class="space-y-3.5">
+              <div class="flex items-center justify-between text-xs font-code-sm text-red-800 bg-red-50 border border-red-200 px-3 py-1.5 rounded-lg">
+                <span class="lang-zh">⚠️ voxelpla.com 缺条码与时效声明 · AI 首屏直接推给竞品</span>
+                <span class="lang-en">⚠️ voxelpla.com lacks GTIN &amp; SLA · AI recommends rival</span>
+                <span class="font-bold">45 / 100</span>
+              </div>
+
+              <div class="border border-outline-variant bg-[#fafafa] rounded-xl p-4 relative">
+                <div class="absolute -top-2.5 right-3 bg-neutral-900 text-white font-code-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                  <span class="lang-zh">被竞品截流 #1</span><span class="lang-en">Hijacked by Rival #1</span>
+                </div>
+                <div class="flex items-center gap-3.5">
+                  <div class="w-16 h-16 rounded-lg bg-neutral-200 flex items-center justify-center font-code-sm text-xs font-bold text-neutral-600 shrink-0">RIVAL</div>
+                  <div class="flex-1">
+                    <div class="font-bold text-sm text-primary">eSUN / Bambu Official Store</div>
+                    <div class="font-code-sm text-xs text-on-surface-variant mt-0.5">$24.99 · ✓ GTIN Verified · ✓ US 3-Day Schema</div>
+                  </div>
+                  <span class="px-2.5 py-1 bg-neutral-800 text-white text-xs rounded font-medium">Buy ↗</span>
+                </div>
+              </div>
+
+              <div class="border-2 border-red-300 bg-red-50/70 p-3.5 rounded-xl flex items-center justify-between gap-3">
+                <div class="flex items-start gap-2.5 text-xs">
+                  <span class="material-symbols-outlined text-red-600 text-lg mt-0.5">visibility_off</span>
+                  <div>
+                    <div class="font-bold text-red-900 font-code-sm">
+                      <span class="lang-zh">voxelpla.com：在 AI 导购首屏“隐身出局”</span>
+                      <span class="lang-en">voxelpla.com: Filtered Out of AI Top Pick</span>
+                    </div>
+                    <p class="text-red-700 mt-0.5">
+                      <span class="lang-zh">缺 GTIN 条码 (100.0%) + 无美区 3 日达代码 + 参数封在图片里。</span>
+                      <span class="lang-en">Missing GTIN (100.0%) + No US 3-day SLA schema + Poster-trapped specs.</span>
+                    </p>
+                  </div>
+                </div>
+                <button type="button" onclick="switchSim('after')" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-semibold text-xs whitespace-nowrap cursor-pointer shadow-sm">
+                  <span class="lang-zh">看修复效果 →</span><span class="lang-en">See After →</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- AFTER STATE -->
+            <div id="simAfterState" class="space-y-3.5 hidden">
+              <div class="flex items-center justify-between text-xs font-code-sm text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg">
+                <span class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span>
+                  <span class="lang-zh">已挂载无损补丁 · Voxelpla 爆款霸榜首屏直推卡</span>
+                  <span class="lang-en">Zero-UI ACO Patch Active · Voxelpla Ranked #1</span>
+                </span>
+                <span class="font-bold">96 / 100</span>
+              </div>
+
+              <div class="border-2 border-emerald-500 bg-emerald-50/20 rounded-xl p-4 relative">
+                <div class="absolute -top-2.5 right-3 bg-emerald-600 text-white font-code-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
+                  <span class="lang-zh">★ AI 首选直推购买卡</span><span class="lang-en">★ #1 AI Shopping Pick</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                  <div class="w-24 h-24 rounded-xl bg-[#09090b] border border-neutral-800 flex flex-col items-center justify-center shrink-0 p-2">
+                    <svg class="w-11 h-11 text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="white"/><circle cx="12" cy="12" r="3.5"/><path stroke-linecap="round" d="M12 3v5.5M12 15.5V21"/></svg>
+                    <span class="font-code-sm text-[10px] text-neutral-300 mt-1 truncate max-w-full">500mm/s High-Speed</span>
+                  </div>
+                  <div class="flex-1 w-full space-y-2">
+                    <div>
+                      <div class="font-bold text-sm sm:text-base text-primary line-clamp-1">VOXELPLA Pro High-Speed 1.75mm 1kg Spool</div>
+                      <div class="flex items-center gap-2 mt-0.5">
+                        <span class="font-code-lg text-base font-extrabold text-primary">$16.99</span>
+                        <span class="text-amber-500 text-xs">★★★★★ 4.9</span>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2 py-0.5 bg-white border border-emerald-300 text-emerald-800 text-xs font-code-sm rounded font-medium">✓ US 3-Day Free</span>
+                      <span class="px-2 py-0.5 bg-white border border-emerald-300 text-emerald-800 text-xs font-code-sm rounded font-medium">✓ 30d Return</span>
+                      <span class="px-2 py-0.5 bg-white border border-emerald-300 text-emerald-800 text-xs font-code-sm rounded font-medium">✓ GTIN Verified</span>
+                    </div>
+                    <div class="pt-2 border-t border-emerald-200/60 flex items-center justify-between">
+                      <span class="font-code-sm text-xs text-on-surface-variant">voxelpla.com · $0 Ad Click Fee</span>
+                      <span class="px-3 py-1 bg-primary text-white text-xs font-semibold rounded-lg">Buy Direct ↗</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. VISUAL X-RAY SCANNER + COMPACT 5-PILL RADAR & LOST REVENUE SLIDER -->
+  <section class="py-12 px-4 md:px-10 max-w-7xl mx-auto border-b border-outline-variant" id="xray">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+      <!-- Left: Visual X-Ray Poster Scanner + Optional Dev Code Drawer -->
+      <div class="lg:col-span-6 bg-white border border-outline-variant rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="font-bold text-base sm:text-lg text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined">document_scanner</span>
+              <span class="lang-zh">为什么丢单？详情海报对 AI 是“像素盲区”</span>
+              <span class="lang-en">Why You Lose Orders: Graphic Posters Blind AI</span>
+            </h2>
+            <span class="font-code-sm text-xs bg-surface-container px-2 py-0.5 rounded">0-PIXEL DIFF</span>
+          </div>
+          <p class="text-xs text-on-surface-variant mb-4">
+            <span class="lang-zh">不动原站美工海报 1 像素，我们在底层挂载隐藏语义胶囊，让 AI 0.2 秒读懂全部卖点：</span>
+            <span class="lang-en">Keep your visual banners 100% untouched—we mount hidden machine capsules underneath:</span>
+          </p>
+
+          <div class="relative rounded-xl overflow-hidden border border-neutral-800 h-60 bg-[#09090b] grid grid-cols-2">
+            <div class="bg-gradient-to-br from-neutral-800 via-neutral-900 to-black p-4 flex flex-col justify-between border-r border-emerald-500/40">
+              <div>
+                <span class="inline-block px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 font-code-sm text-[10px]">POSTER_BANNER.WEBP</span>
+                <div class="text-white font-extrabold text-sm leading-tight mt-1 line-clamp-2">VOXELPLA Pro High-Speed 1.75mm 1kg Spool</div>
+              </div>
+              <div class="my-auto flex justify-center">
+                <div class="w-14 h-14 rounded-full border-2 border-dashed border-red-400/70 flex items-center justify-center text-red-300 font-code-sm text-[10px] text-center p-1">
+                  PIXELS ONLY
+                </div>
+              </div>
+              <div class="bg-red-600/90 text-white text-[11px] font-code-sm px-2 py-1 rounded text-center font-medium">
+                <span class="lang-zh">✕ AI 无法提取参数</span><span class="lang-en">✕ Unreadable Pixels</span>
+              </div>
+            </div>
+
+            <div class="p-4 bg-[#09090b] flex flex-col justify-between font-code-sm">
+              <div class="text-[11px] text-emerald-400 flex items-center justify-between border-b border-neutral-800 pb-1">
+                <span>ACO_PATCH</span>
+                <span class="animate-pulse">● ACTIVE</span>
+              </div>
+              <div class="space-y-1.5 my-auto">
+                <div class="bg-emerald-950/70 border border-emerald-500/40 rounded px-2 py-1 flex justify-between text-[11px]">
+                  <span class="text-emerald-300">GTIN:</span><span class="text-white font-bold">Verified ✓</span>
+                </div>
+                <div class="bg-emerald-950/70 border border-emerald-500/40 rounded px-2 py-1 flex justify-between text-[11px]">
+                  <span class="text-emerald-300">Spec:</span><span class="text-white font-bold truncate ml-1">500mm/s High-Speed</span>
+                </div>
+                <div class="bg-emerald-950/70 border border-emerald-500/40 rounded px-2 py-1 flex justify-between text-[11px]">
+                  <span class="text-emerald-300">US SLA:</span><span class="text-white font-bold">2-4d Free</span>
+                </div>
+                <div class="bg-emerald-950/70 border border-emerald-500/40 rounded px-2 py-1 flex justify-between text-[11px]">
+                  <span class="text-emerald-300">Return:</span><span class="text-white font-bold">30d Free</span>
+                </div>
+              </div>
+              <div class="text-[11px] text-emerald-400 text-right font-semibold">Google Rich: 100% Pass</div>
+            </div>
+            <div class="scanner-sweep absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent pointer-events-none shadow-[0_0_10px_#10b981]"></div>
+          </div>
+        </div>
+
+        <details class="mt-4 pt-3 border-t border-outline-variant group">
+          <summary class="font-code-sm text-xs text-on-surface-variant hover:text-primary cursor-pointer flex items-center justify-between">
+            <span><span class="lang-zh">🔧 技术团队点此查看自动生成的 .liquid 补丁源码</span><span class="lang-en">🔧 Engineers: View Auto-Generated .liquid Patch</span></span>
+            <span class="text-primary font-bold">+</span>
+          </summary>
+          <pre class="mt-2 p-3 rounded-lg bg-[#09090b] text-emerald-300 font-code-sm text-[11px] overflow-x-auto leading-relaxed">{% comment %} snippets/aco-agent-schema.liquid — Zero-UI Patch for voxelpla.com {% endcomment %}
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Product&quot;,
+  &quot;name&quot;: &quot;VOXELPLA Pro High-Speed 1.75mm 1kg Spool&quot;,
+  &quot;gtin13&quot;: &quot;{{ product.selected_or_first_available_variant.barcode }}&quot;,
+  &quot;additionalProperty&quot;: [{ &quot;@type&quot;: &quot;PropertyValue&quot;, &quot;name&quot;: &quot;Key Spec&quot;, &quot;value&quot;: &quot;500mm/s High-Speed&quot; }],
+  &quot;offers&quot;: {
+    &quot;@type&quot;: &quot;Offer&quot;,
+    &quot;price&quot;: &quot;16.99&quot;,
+    &quot;priceCurrency&quot;: &quot;USD&quot;,
+    &quot;shippingDetails&quot;: { &quot;@type&quot;: &quot;OfferShippingDetails&quot;, &quot;shippingDestination&quot;: { &quot;@type&quot;: &quot;DefinedRegion&quot;, &quot;addressCountry&quot;: &quot;US&quot; } }
+  }
+}
+&lt;/script&gt;</pre>
+        </details>
+      </div>
+
+      <!-- Right: Compact 5-Pill Telemetry + Lost Orders ROI Slider -->
+      <div class="lg:col-span-6 bg-white border border-outline-variant rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="font-bold text-base sm:text-lg text-primary">
+              <span class="lang-zh">5 维体检雷达与每年漏单测算</span>
+              <span class="lang-en">5-Axis Radar &amp; Annual Leaked Orders</span>
+            </h2>
+            <span class="font-code-sm text-xs text-red-700 bg-red-50 border border-red-200 px-2 py-0.5 rounded font-bold">45/100</span>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#fafafa] border border-outline-variant space-y-2">
+            
+    <div class="flex items-center gap-2.5 text-xs font-code-sm">
+      <span class="w-28 truncate text-primary font-medium"><span class="lang-zh">01. UCP 握手</span><span class="lang-en">01. UCP Protocol</span></span>
+      <div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+        <div class="bg-emerald-600 h-full rounded-full" style="width:100%"></div>
+      </div>
+      <span class="w-12 text-right font-bold text-emerald-700">25/25</span>
+    </div>
+    <div class="flex items-center gap-2.5 text-xs font-code-sm">
+      <span class="w-28 truncate text-primary font-medium"><span class="lang-zh">02. AI 爬虫权限</span><span class="lang-en">02. Bot Access</span></span>
+      <div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+        <div class="bg-emerald-600 h-full rounded-full" style="width:100%"></div>
+      </div>
+      <span class="w-12 text-right font-bold text-emerald-700">20/20</span>
+    </div>
+    <div class="flex items-center gap-2.5 text-xs font-code-sm">
+      <span class="w-28 truncate text-primary font-medium"><span class="lang-zh">03. GTIN 条码率</span><span class="lang-en">03. SKU GTIN</span></span>
+      <div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+        <div class="bg-red-600 h-full rounded-full" style="width:6%"></div>
+      </div>
+      <span class="w-12 text-right font-bold text-red-600">0/20</span>
+    </div>
+    <div class="flex items-center gap-2.5 text-xs font-code-sm">
+      <span class="w-28 truncate text-primary font-medium"><span class="lang-zh">04. 美区时效盾</span><span class="lang-en">04. Shipping SLA</span></span>
+      <div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+        <div class="bg-red-600 h-full rounded-full" style="width:6%"></div>
+      </div>
+      <span class="w-12 text-right font-bold text-red-600">0/20</span>
+    </div>
+    <div class="flex items-center gap-2.5 text-xs font-code-sm">
+      <span class="w-28 truncate text-primary font-medium"><span class="lang-zh">05. 海报可读性</span><span class="lang-en">05. Poster OCR</span></span>
+      <div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+        <div class="bg-red-600 h-full rounded-full" style="width:6%"></div>
+      </div>
+      <span class="w-12 text-right font-bold text-red-600">0/15</span>
+    </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#fafafa] border border-outline-variant">
+            <div class="flex justify-between items-center mb-1.5">
+              <label for="gmvSlider" class="font-code-sm text-xs font-semibold text-primary">
+                <span class="lang-zh">拖动估算 Voxelpla 月销售额：</span>
+                <span class="lang-en">Drag Monthly Store GMV:</span>
+              </label>
+              <span class="font-code-lg text-sm font-extrabold text-primary" id="sliderValueText">$80,000 / mo</span>
+            </div>
+            <input
+              type="range"
+              id="gmvSlider"
+              min="10000"
+              max="500000"
+              step="10000"
+              value="80000"
+              aria-valuetext="$80,000 per month"
+              oninput="updateRoiCalc(this.value)"
+              class="w-full cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <div class="mt-4 bg-[#09090b] text-white rounded-xl p-4 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <span class="font-code-sm text-xs text-neutral-400 block">
+              <span class="lang-zh">因 AI 隐身预计每年流失给竞品的免流订单：</span>
+              <span class="lang-en">Est. Annual Free AI Orders Leaked to Rivals:</span>
+            </span>
+            <div class="text-2xl font-extrabold text-emerald-400 font-code-lg mt-0.5" id="lostAmountText">$124,800 / yr</div>
+          </div>
+          <a href="../../delivery-demo/" class="px-3.5 py-2 rounded-lg bg-white text-black font-semibold text-xs hover:bg-neutral-200 transition-all">
+            <span class="lang-zh">看 7天无损修复演示 →</span><span class="lang-en">See 7-Day Fix →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. VISUAL AUDITED SKU CARDS -->
+  <section class="py-12 px-4 md:px-10 max-w-7xl mx-auto border-b border-outline-variant" id="skus">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <span class="font-code-sm text-xs uppercase text-on-surface-variant">SAMPLED FLAGSHIP SKUS</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-primary mt-0.5">
+          <span class="lang-zh">任选 1 款贵站爆款，24h 免费出 AI 推荐卡样板</span>
+          <span class="lang-en">Pick Any Flagship SKU Below for a Free 24h AI Card Proof</span>
+        </h2>
+      </div>
+      <span class="font-code-sm text-xs text-on-surface-variant">
+        <span class="lang-zh">无需后台密码 · 先看真机对比图再决定</span>
+        <span class="lang-en">No admin password · Proof before payment</span>
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="bg-white border border-outline-variant hover:border-primary rounded-2xl p-4 flex flex-col justify-between gap-3 shadow-sm transition-all">
+          <div class="flex items-start gap-3">
+            <div class="w-14 h-14 rounded-xl bg-[#09090b] flex items-center justify-center shrink-0 p-2">
+              <svg class="w-11 h-11 text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="white"/><circle cx="12" cy="12" r="3.5"/><path stroke-linecap="round" d="M12 3v5.5M12 15.5V21"/></svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="font-bold text-xs sm:text-sm text-primary line-clamp-2 leading-snug">VOXELPLA Pro High-Speed 1.75mm 1kg Spool</div>
+              <div class="font-code-sm text-xs font-extrabold text-primary mt-1">$16.99</div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 text-[11px] font-code-sm font-semibold"><span class="lang-zh">✕ 缺 GTIN 条码</span><span class="lang-en">✕ No GTIN</span></span>
+            <span class="px-2 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 text-[11px] font-code-sm font-semibold"><span class="lang-zh">✕ 缺美区时效</span><span class="lang-en">✕ No US SLA</span></span>
+            <span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 text-[11px] font-code-sm font-semibold"><span class="lang-zh">✕ 参数锁在海报图</span><span class="lang-en">✕ Poster-Locked</span></span>
+          </div>
+          <button type="button" onclick="openBooking('¥0 免费打样：VOXELPLA Pro High-Speed…', 'Free 1-SKU Proof: VOXELPLA Pro High-Speed…', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="w-full py-2 px-3 rounded-lg bg-surface-container-low hover:bg-primary hover:text-white text-primary font-semibold text-xs transition-all cursor-pointer flex items-center justify-between">
+            <span class="lang-zh">免费给这款出 AI 推荐卡样板</span><span class="lang-en">Free AI Card Proof for This SKU</span>
+            <span>→</span>
+          </button>
+        </div>
+        <div class="bg-white border border-outline-variant hover:border-primary rounded-2xl p-4 flex flex-col justify-between gap-3 shadow-sm transition-all">
+          <div class="flex items-start gap-3">
+            <div class="w-14 h-14 rounded-xl bg-[#09090b] flex items-center justify-center shrink-0 p-2">
+              <svg class="w-11 h-11 text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="white"/><circle cx="12" cy="12" r="3.5"/><path stroke-linecap="round" d="M12 3v5.5M12 15.5V21"/></svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="font-bold text-xs sm:text-sm text-primary line-clamp-2 leading-snug">Voxelpla Pro Bundle Pack</div>
+              <div class="font-code-sm text-xs font-extrabold text-primary mt-1">$23.79</div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 text-[11px] font-code-sm font-semibold"><span class="lang-zh">✕ 缺 GTIN 条码</span><span class="lang-en">✕ No GTIN</span></span>
+            <span class="px-2 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 text-[11px] font-code-sm font-semibold"><span class="lang-zh">✕ 缺美区时效</span><span class="lang-en">✕ No US SLA</span></span>
+            <span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 text-[11px] font-code-sm font-semibold"><span class="lang-zh">✕ 参数锁在海报图</span><span class="lang-en">✕ Poster-Locked</span></span>
+          </div>
+          <button type="button" onclick="openBooking('¥0 免费打样：Voxelpla Pro Bundle Pack', 'Free 1-SKU Proof: Voxelpla Pro Bundle Pack', 'https://voxelpla.com', 'https://voxelpla.com/products/pro-bundle')" class="w-full py-2 px-3 rounded-lg bg-surface-container-low hover:bg-primary hover:text-white text-primary font-semibold text-xs transition-all cursor-pointer flex items-center justify-between">
+            <span class="lang-zh">免费给这款出 AI 推荐卡样板</span><span class="lang-en">Free AI Card Proof for This SKU</span>
+            <span>→</span>
+          </button>
+        </div>
+    </div>
+  </section>
+
+  <!-- 4. ZERO-RISK 3-TIER ACTION CARDS -->
+  
+  <section class="py-14 px-4 md:px-10 max-w-7xl mx-auto" id="pricing">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="font-code-sm text-xs uppercase tracking-wider text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded font-semibold">
+        PROOF FIRST · ZERO RISK
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-primary mt-2">
+        <span class="lang-zh">先免费看自家爆款打样效果，满意再合作</span>
+        <span class="lang-en">See Your #1 SKU Live in AI First—Pay Only After Proof</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+      <!-- Tier 0: Free 1-SKU Hook -->
+      <div class="border-2 border-emerald-500 bg-white rounded-2xl p-6 flex flex-col justify-between relative shadow-sm">
+        <div class="absolute -top-3 left-6 bg-emerald-600 text-white font-code-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+          DAILY 5 FREE SEATS
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2 pt-1">
+            <h3 class="text-lg font-extrabold text-primary">
+              <span class="lang-zh">免费 1 款爆款打样</span><span class="lang-en">Free 1-SKU Live Proof</span>
+            </h3>
+            <span class="font-code-lg text-2xl font-extrabold text-emerald-600">$0</span>
+          </div>
+          <p class="text-xs text-on-surface-variant mb-5">
+            <span class="lang-zh">24h 出贵站 1 款爆款的 Google 全绿补丁与 ChatGPT 卡片预览，零成本验真伪。</span>
+            <span class="lang-en">24h turnaround: custom Liquid patch + ChatGPT Buy Card preview for your #1 flagship SKU.</span>
+          </p>
+          <ul class="space-y-2.5 font-code-sm text-xs text-primary mb-6">
+            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <span class="lang-zh">1 款主力爆款真实漏洞与条码核验</span><span class="lang-en">1 flagship SKU forensic audit</span></li>
+            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <span class="lang-zh">专属 ChatGPT 推荐卡前后实测对比</span><span class="lang-en">Before/After ChatGPT card proof</span></li>
+            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <span class="lang-zh">0 费用、0 密码、看效果再决定</span><span class="lang-en">Zero fee, zero password required</span></li>
+          </ul>
+        </div>
+        <button type="button" onclick="openBooking('¥0 免费 1 款爆款打样', 'Free 1-SKU Live Proof', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all cursor-pointer">
+          <span class="lang-zh">免费领取 1 款爆款打样 →</span><span class="lang-en">Claim Free 1-SKU Proof →</span>
+        </button>
+      </div>
+
+      <!-- Tier 1: Top-5 Pilot -->
+      <div class="border border-outline-variant bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-lg font-extrabold text-primary">
+              <span class="lang-zh">Top-5 爆款极速包</span><span class="lang-en">Top-5 SKU Speed Pack</span>
+            </h3>
+            <div>
+              <span class="font-code-lg text-2xl font-extrabold text-primary lang-zh">¥1,980</span>
+              <span class="font-code-sm text-xs text-on-surface-variant lang-zh">/ $299</span>
+              <span class="font-code-lg text-2xl font-extrabold text-primary lang-en">$299</span>
+              <span class="font-code-sm text-xs text-on-surface-variant lang-en">/ ¥1,980</span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant mb-5">
+            <span class="lang-zh">48 小时跑通全店最赚钱的 5 款核心爆款，费用可 100% 抵扣全店大包。</span>
+            <span class="lang-en">48h full deployment on your top 5 revenue SKUs. 100% credited toward Full Store.</span>
+          </p>
+          <ul class="space-y-2.5 font-code-sm text-xs text-primary mb-6">
+            <li class="flex items-center gap-2"><span class="font-bold">✓</span> <span class="lang-zh">Top 5 爆款条码与海报参数精洗</span><span class="lang-en">GTIN &amp; OCR specs for Top 5 SKUs</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold">✓</span> <span class="lang-zh">美区配送时效与退换货 Schema 挂载</span><span class="lang-en">US Shipping &amp; Return SLA schema</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold">✓</span> <span class="lang-zh">Google 官方测试达 90+ 分否则全退</span><span class="lang-en">90+ Google Rich score or full refund</span></li>
+          </ul>
+        </div>
+        <button type="button" onclick="openBooking('¥1,980 ($299) Top-5 爆款极速包', '$299 Top-5 SKU Speed Pack', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="w-full py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container border border-primary text-primary font-semibold text-sm transition-all cursor-pointer">
+          <span class="lang-zh">预约 Top-5 极速改造 →</span><span class="lang-en">Start $299 Top-5 Pilot →</span>
+        </button>
+      </div>
+
+      <!-- Tier 2: Turnkey 100-SKU Obsidian -->
+      <div class="border border-neutral-800 bg-[#09090b] text-white rounded-2xl p-6 flex flex-col justify-between relative shadow-xl">
+        <div class="absolute -top-3 right-6 bg-emerald-400 text-black font-code-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+          90+ SCORE OR FULL REFUND
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2 pt-1">
+            <h3 class="text-lg font-extrabold text-white">
+              <span class="lang-zh">全店 100 款无损全包</span><span class="lang-en">100-SKU Full Store Turnkey</span>
+            </h3>
+            <div>
+              <span class="font-code-lg text-2xl font-extrabold text-emerald-400 lang-zh">¥9,800</span>
+              <span class="font-code-sm text-xs text-neutral-400 lang-zh">/ $1,499</span>
+              <span class="font-code-lg text-2xl font-extrabold text-emerald-400 lang-en">$1,499</span>
+              <span class="font-code-sm text-xs text-neutral-400 lang-en">/ ¥9,800</span>
+            </div>
+          </div>
+          <p class="text-xs text-neutral-400 mb-5">
+            <span class="lang-zh">7 天全托管免源码交付，打通 ChatGPT、Perplexity 与 Google 官方商品流。</span>
+            <span class="lang-en">7-day white-glove turnkey deployment + official OpenAI &amp; Perplexity Merchant Feed onboarding.</span>
+          </p>
+          <ul class="space-y-2.5 font-code-sm text-xs text-neutral-200 mb-6">
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> <span class="lang-zh">前 100 款主力 SKU 海报参数 100% 提纯</span><span class="lang-en">100 SKUs full poster OCR &amp; GTIN sync</span></li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> <span class="lang-zh">三大 AI 导购官方 Merchant Feed 代提报</span><span class="lang-en">OpenAI &amp; Perplexity Merchant Feeds</span></li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> <span class="lang-zh">额外免费送首月 ¥980/月 新品同步护航</span><span class="lang-en">Includes Month 1 of $149/mo ACO Care free</span></li>
+          </ul>
+        </div>
+        <button type="button" onclick="openBooking('¥9,800 ($1,499) 全店 100 款无损全包（含首月免费护航）', '$1,499 100-SKU Turnkey Pro (+ Free Month 1 Care)', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="w-full py-3 px-4 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-sm transition-all cursor-pointer">
+          <span class="lang-zh">预约 7 天全店无损交付 →</span><span class="lang-en">Book 7-Day Full Turnkey →</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Post-Launch Recurring Care Strip (CEO MRR Engine) + Channel Partner Callout -->
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <div class="lg:col-span-7 bg-white border border-outline-variant rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-code-sm text-[11px] font-bold">OPTIONAL MRR CARE</span>
+            <span class="font-bold text-sm text-primary">
+              <span class="lang-zh">ACO Care 新品同步与掉榜巡检：¥980/月 ($149/mo)</span>
+              <span class="lang-en">ACO Care Auto-Sync &amp; Rank Guard: $149/mo (¥980/mo)</span>
+            </span>
+          </div>
+          <p class="text-xs text-on-surface-variant">
+            <span class="lang-zh">全店包免费送首月！含每月上新 20 款海报参数自动同步 + 每周 ChatGPT 掉榜告警 + 季度协议升级（随时可停）。</span>
+            <span class="lang-en">Month 1 FREE with Full Turnkey! Auto-syncs up to 20 new SKUs/mo + weekly ChatGPT rank monitoring (cancel anytime).</span>
+          </p>
+        </div>
+        <button type="button" onclick="openBooking('ACO Care 持续护航订阅 ¥980/月 ($149/mo)', 'ACO Care Monthly Sync ($149/mo)', 'https://voxelpla.com', 'https://voxelpla.com/products/flagship-bestseller')" class="px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-primary hover:text-white border border-outline-variant text-primary font-semibold text-xs whitespace-nowrap transition-all cursor-pointer">
+          <span class="lang-zh">了解包月护航 →</span><span class="lang-en">Add Care Plan →</span>
+        </button>
+      </div>
+
+      <div class="lg:col-span-5 bg-[#09090b] text-white border border-neutral-800 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+        <div class="space-y-1">
+          <span class="font-code-sm text-[11px] text-emerald-400 font-bold">CHANNEL PARTNER · 30% REV-SHARE</span>
+          <div class="font-bold text-sm">
+            <span class="lang-zh">建站机构 / 出海广告代投合伙人</span>
+            <span class="lang-en">Shopify &amp; Ad Agency Partners</span>
+          </div>
+          <p class="text-xs text-neutral-400">
+            <span class="lang-zh">白标交付 0 研发成本，享 30% 首单分润 + 25% 长期月费分成。</span>
+            <span class="lang-en">White-label fulfillment: 30% upfront + 25% recurring MRR share.</span>
+          </p>
+        </div>
+        <a href="../../partners/" class="px-3.5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs whitespace-nowrap transition-all">
+          <span class="lang-zh">算分润收益 →</span><span class="lang-en">Partner Calc →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Compact On-Demand Boss FAQ Accordion (modern-web-guidance: accordion + content-first-noise-reduction) -->
+    <section class="mt-8 bg-white border border-outline-variant rounded-2xl p-5 sm:p-6" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-sm font-bold text-primary mb-3 font-code-sm uppercase tracking-wide">
+        <span class="lang-zh">独立站老板最常问的 3 个问题（点击展开）</span>
+        <span class="lang-en">3 Questions Store Owners Ask Before Free Proof</span>
+      </h2>
+      <div class="divide-y divide-outline-variant text-xs sm:text-sm">
+        <details class="aco-item py-3">
+          <summary class="aco-summary font-semibold text-primary">
+            <span class="lang-zh">真的不需要给 Shopify 后台主密码或店铺源码吗？</span>
+            <span class="lang-en">Do you really need zero admin passwords or theme source code?</span>
+          </summary>
+          <p class="pt-2 pl-5 text-xs text-on-surface-variant leading-relaxed">
+            <span class="lang-zh">完全不需要。我们直接基于贵站公开商品页与海报图离线生成好 1 个独立的 <code>aco-agent-schema.liquid</code> 文件，您的运营 2 分钟粘贴 1 行引用即可生效（或用 Shopify 官方受限 4 位协作者码由我们代挂），随时可一键移除。</span>
+            <span class="lang-en">Zero passwords needed. We generate a standalone <code>aco-agent-schema.liquid</code> file from public catalog data; your team pastes 1 render line in 2 minutes (or grants restricted 4-digit Collaborator snippet access).</span>
+          </p>
+        </details>
+        <details class="aco-item py-3">
+          <summary class="aco-summary font-semibold text-primary">
+            <span class="lang-zh">挂载隐藏语义芯片会影响现在的网页打开速度、排版或 Google SEO 吗？</span>
+            <span class="lang-en">Will this affect page speed, visual layout, or existing Google SEO?</span>
+          </summary>
+          <p class="pt-2 pl-5 text-xs text-on-surface-variant leading-relaxed">
+            <span class="lang-zh">前台视觉 0 像素改动、0 外部 JS 阻塞脚本！注入的是 Google 与 OpenAI 官方标准纯文本 <code>application/ld+json</code> 微数据（体积小于 4KB），不仅不拖慢 LCP，还会直接点亮 Google 购物富媒体星级与配送盾牌。</span>
+            <span class="lang-en">0-pixel visual diff and 0 render-blocking JS. The patch injects pure <code>application/ld+json</code> structured metadata (&lt;4KB), boosting both ChatGPT Shopping citations and Google Merchant rich snippets.</span>
+          </p>
+        </details>
+        <details class="aco-item py-3">
+          <summary class="aco-summary font-semibold text-primary">
+            <span class="lang-zh">领「¥0 免费 1 款爆款打样」需要我准备什么？多久能看到结果？</span>
+            <span class="lang-en">What do you need for the Free 1-SKU Proof, and how fast is delivery?</span>
+          </summary>
+          <p class="pt-2 pl-5 text-xs text-on-surface-variant leading-relaxed">
+            <span class="lang-zh">只需发给我们您店里最想推的 1 款爆款链接（无需任何权限）。24 小时内我们把 Google 官方验证 100% 全绿截图 + 定制补丁源码 + ChatGPT 首推卡片预览图发到您微信或邮箱，满意再谈合作。</span>
+            <span class="lang-en">Just share 1 flagship product URL. Within 24 hours we send back the 100% green Google Rich Results verification, the ready-to-paste Liquid patch, and your Before/After ChatGPT card preview.</span>
+          </p>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <footer class="border-t border-outline-variant px-4 md:px-10 py-8 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-code-sm text-on-surface-variant">
+      <div>© 2026 ACO STUDIO · ZERO-CODE AI SHOPPING OPTIMIZATION</div>
+      <div class="flex flex-wrap gap-6">
+        <a href="../../" class="hover:text-primary">← 20-Brand Leaderboard</a>
+        <a href="../../delivery-demo/" class="hover:text-primary">7-Day Delivery Showcase</a>
+        <a href="../../partners/" class="hover:text-primary text-emerald-700 font-semibold">30% Agency Partner</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- NATIVE MODAL DIALOG FOR ZERO-LOSS LEAD CAPTURE (modern-web-guidance: dialog + light-dismiss-a-dialog) -->
+  <dialog id="bookingModal" closedby="any" aria-labelledby="modalTierTitle">
+    <div class="p-6 space-y-4">
+      <div class="flex items-start justify-between gap-3 pb-3 border-b border-outline-variant">
+        <div>
+          <span class="font-code-sm text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded font-semibold">24H LIVE PROOF</span>
+          <h2 id="modalTierTitle" class="text-base font-bold text-primary mt-1">申请免费 1 款爆款实测打样</h2>
+        </div>
+        <form method="dialog">
+          <button type="submit" value="cancel" aria-label="Close modal" class="p-1 rounded text-neutral-400 hover:text-primary cursor-pointer">✕</button>
+        </form>
+      </div>
+
+      <form id="leadCaptureForm" onsubmit="submitLeadForm(event)" class="space-y-3 text-xs">
+        <div>
+          <label for="leadStore" class="block font-semibold text-primary mb-1">
+            <span class="lang-zh">独立站域名 (Store Domain)</span><span class="lang-en">Storefront Domain</span>
+          </label>
+          <input id="leadStore" type="text" required placeholder="https://yourstore.com" value="https://voxelpla.com" class="w-full px-3 py-2 border border-outline-variant rounded-lg font-code-sm text-xs text-primary"/>
+        </div>
+        <div>
+          <label for="leadSku" class="block font-semibold text-primary mb-1">
+            <span class="lang-zh">优先打样的 1 款核心爆款（选填）</span><span class="lang-en">Flagship Product URL or Name (Optional)</span>
+          </label>
+          <input id="leadSku" type="text" placeholder="https://yourstore.com/products/bestseller" value="https://voxelpla.com/products/flagship-bestseller" class="w-full px-3 py-2 border border-outline-variant rounded-lg font-code-sm text-xs text-primary"/>
+        </div>
+        <div>
+          <label for="leadContact" class="block font-semibold text-primary mb-1">
+            <span class="lang-zh">接收打样效果图的 微信 / 邮箱 / WhatsApp</span><span class="lang-en">Email / WhatsApp / WeChat for Proof Delivery</span>
+          </label>
+          <input id="leadContact" type="text" required autofocus placeholder="WeChat ID or name@brand.com" class="w-full px-3 py-2 border border-outline-variant rounded-lg font-code-sm text-xs text-primary"/>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm hover:bg-neutral-800 transition-all cursor-pointer">
+          <span class="lang-zh">立即生成免费打样工单 →</span><span class="lang-en">Generate Free Proof Ticket →</span>
+        </button>
+      </form>
+
+      <div id="leadTicketBox" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-2.5 text-xs">
+        <div class="font-bold text-emerald-900">
+          <span class="lang-zh">✓ 工单已自动复制！直接粘贴回复顾问微信/邮件，或点右侧在线提单：</span>
+          <span class="lang-en">✓ Ticket Copied! Reply to your advisor or submit online below:</span>
+        </div>
+        <pre id="ticketSummary" class="p-2.5 rounded bg-white border border-emerald-200 font-code-sm text-[11px] text-primary whitespace-pre-wrap"></pre>
+        <div class="grid grid-cols-2 gap-2">
+          <button type="button" onclick="copyTicket(this)" class="py-2 px-3 rounded-lg bg-primary text-white font-semibold text-xs cursor-pointer">
+            <span class="lang-zh">复制工单回传顾问</span><span class="lang-en">Copy Ticket Text</span>
+          </button>
+          <a id="mailtoLink" href="#" target="_blank" rel="noopener" class="py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs text-center">
+            <span class="lang-zh">在线提交极速工单 ↗</span><span class="lang-en">Submit Priority Ticket ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    let selectedPlanZh = '¥0 免费 1 款爆款实测打样';
+    let selectedPlanEn = 'Free 1-SKU Live Proof';
+
+    function openBooking(planZh, planEn, prefillDom, prefillSku) {
+      selectedPlanZh = planZh;
+      selectedPlanEn = planEn;
+      const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+      document.getElementById('modalTierTitle').textContent = lang === 'zh' ? planZh : planEn;
+      if (prefillDom) document.getElementById('leadStore').value = prefillDom;
+      if (prefillSku) document.getElementById('leadSku').value = prefillSku;
+      document.getElementById('leadTicketBox').classList.add('hidden');
+      document.getElementById('bookingModal').showModal();
+    }
+
+    function submitLeadForm(e) {
+      e.preventDefault();
+      const store = document.getElementById('leadStore').value.trim();
+      const sku = document.getElementById('leadSku').value.trim() || '(Top #1 Flagship SKU)';
+      const contact = document.getElementById('leadContact').value.trim();
+      const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+      const plan = lang === 'zh' ? selectedPlanZh : selectedPlanEn;
+      const summary = `[ACO Studio Request]\nPlan: ${plan}\nStore: ${store}\nSKU: ${sku}\nContact: ${contact}`;
+      document.getElementById('ticketSummary').textContent = summary;
+      document.getElementById('mailtoLink').href = 'https://github.com/lufie/aco-readiness/issues/new?title=' + encodeURIComponent('[ACO Proof] ' + store) + '&body=' + encodeURIComponent(summary);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(summary).catch(() => {});
+      }
+      document.getElementById('leadTicketBox').classList.remove('hidden');
+      try { localStorage.setItem('aco_last_lead', JSON.stringify({ plan, store, sku, contact, ts: new Date().toISOString() })); } catch (_) {}
+    }
+
+    function copyTicket(btn) {
+      const txt = document.getElementById('ticketSummary').textContent;
+      navigator.clipboard.writeText(txt).then(() => {
+        const old = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        setTimeout(() => btn.textContent = old, 1500);
+      });
+    }
+
+    // Mandatory Safari fallback for <dialog closedby="any"> (modern-web-guidance: light-dismiss-a-dialog)
+    (function() {
+      const dialog = document.getElementById('bookingModal');
+      if (!dialog) return;
+      if (!('closedBy' in HTMLDialogElement.prototype)) {
+        dialog.addEventListener('click', (event) => {
+          if (event.target !== dialog) return;
+          const rect = dialog.getBoundingClientRect();
+          const isDialogContent = (
+            rect.top <= event.clientY &&
+            event.clientY <= rect.top + rect.height &&
+            rect.left <= event.clientX &&
+            event.clientX <= rect.left + rect.width
+          );
+          if (!isDialogContent) dialog.close();
+        });
+      }
+      dialog.addEventListener('close', () => { dialog.returnValue = ''; });
+    })();
+
+    // Sync aria-invalid & aria-describedby only while invalid (modern-web-guidance: validate-input-after-interaction)
+    (function() {
+      const linkError = (el, shown) => {
+        const errorId = el.dataset.error;
+        if (!errorId) return;
+        const ids = (el.getAttribute('aria-describedby') || '').split(/\s+/).filter((id) => id && id !== errorId);
+        if (shown) ids.push(errorId);
+        if (ids.length) el.setAttribute('aria-describedby', ids.join(' '));
+        else el.removeAttribute('aria-describedby');
+      };
+      const announcer = document.createElement('div');
+      announcer.setAttribute('aria-live', 'polite');
+      announcer.classList.add('visually-hidden');
+      document.body.append(announcer);
+
+      document.querySelectorAll('input[data-error]').forEach((el) => {
+        el.setAttribute('aria-invalid', 'false');
+        el.addEventListener('blur', () => {
+          if (el.value && !el.validity.valid) {
+            el.classList.add('user-invalid-fallback');
+            el.setAttribute('aria-invalid', 'true');
+            linkError(el, true);
+            const err = document.getElementById(el.dataset.error);
+            if (err) announcer.textContent = err.textContent.trim();
+          } else {
+            el.classList.remove('user-invalid-fallback');
+            el.setAttribute('aria-invalid', 'false');
+            linkError(el, false);
+          }
+        });
+        el.addEventListener('input', () => {
+          if (el.validity.valid) {
+            el.classList.remove('user-invalid-fallback');
+            el.setAttribute('aria-invalid', 'false');
+            linkError(el, false);
+          }
+        });
+        el.addEventListener('invalid', () => {
+          el.classList.add('user-invalid-fallback');
+          el.setAttribute('aria-invalid', 'true');
+          linkError(el, true);
+        });
+      });
+    })();
+
+    // Scroll-state query fallback for hiding compact top-bar while scrolling down (modern-web-guidance: content-first-noise-reduction)
+    (function() {
+      if (!CSS.supports('container-type', 'scroll-state')) {
+        const bar = document.querySelector('.top-bar');
+        let lastY = scrollY;
+        addEventListener('scroll', () => {
+          const y = Math.max(0, Math.min(scrollY, document.documentElement.scrollHeight - innerHeight));
+          if (y === lastY) return;
+          bar?.classList.toggle('is-hidden', y > lastY && y > (bar.offsetHeight || 56));
+          lastY = y;
+        }, { passive: true });
+      }
+    })();
+  </script>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      document.getElementById('btn-zh').className = lang === 'zh' ? 'px-2 py-0.5 bg-white text-primary rounded font-semibold shadow-sm' : 'px-2 py-0.5 text-on-surface-variant hover:text-primary';
+      document.getElementById('btn-en').className = lang === 'en' ? 'px-2 py-0.5 bg-white text-primary rounded font-semibold shadow-sm' : 'px-2 py-0.5 text-on-surface-variant hover:text-primary';
+      updateRoiCalc(document.getElementById('gmvSlider').value);
+    }
+
+    function switchSim(state) {
+      const beforeEl = document.getElementById('simBeforeState');
+      const afterEl = document.getElementById('simAfterState');
+      const bBtn = document.getElementById('toggleBefore');
+      const aBtn = document.getElementById('toggleAfter');
+      if (state === 'before') {
+        beforeEl.classList.remove('hidden');
+        afterEl.classList.add('hidden');
+        bBtn.className = 'px-2.5 py-1 rounded-md bg-red-600 text-white font-semibold shadow-sm transition-all cursor-pointer';
+        aBtn.className = 'px-2.5 py-1 rounded-md text-emerald-800 bg-emerald-50 hover:bg-emerald-100 font-semibold transition-all cursor-pointer';
+      } else {
+        afterEl.classList.remove('hidden');
+        beforeEl.classList.add('hidden');
+        aBtn.className = 'px-2.5 py-1 rounded-md bg-emerald-600 text-white font-semibold shadow-sm transition-all cursor-pointer';
+        bBtn.className = 'px-2.5 py-1 rounded-md text-on-surface-variant hover:text-primary transition-all cursor-pointer';
+      }
+    }
+
+    function updateRoiCalc(val) {
+      const gmv = parseInt(val, 10);
+      const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+      const slider = document.getElementById('gmvSlider');
+      document.getElementById('sliderValueText').textContent = '$' + gmv.toLocaleString() + (lang === 'zh' ? ' / 月' : ' / mo');
+      slider.setAttribute('aria-valuetext', '$' + gmv.toLocaleString() + ' per month');
+      const annualLost = Math.round(gmv * 0.13 * 12);
+      document.getElementById('lostAmountText').textContent = '$' + annualLost.toLocaleString() + (lang === 'zh' ? ' / 年' : ' / yr');
+    }
+
+    function copyShareBrief(btn) {
+      const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+      const url = window.location.href;
+      const text = lang === 'zh'
+        ? `【AI导购截流预警】实测 voxelpla.com 当前得分为 45/100（缺失GTIN条码 100.0% + 无美区时效代码），买家问ChatGPT推荐时正被竞品截流。可领1款爆款免费打样：${url}`
+        : `[AI Shopping Alert] voxelpla.com scored 45/100 (100.0% missing GTIN + no US SLA schema). Free 1-SKU live proof: ${url}`;
+      navigator.clipboard.writeText(text).then(() => {
+        const old = btn.innerHTML;
+        btn.innerHTML = '<span class="text-emerald-700 font-bold">✓ Copied!</span>';
+        setTimeout(() => btn.innerHTML = old, 1600);
+      });
+    }
+
+    updateRoiCalc(80000);
+  </script>
+</body>
+</html>

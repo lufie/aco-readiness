@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>ACO Studio 渠道合伙人计划 — 30% 首单现金分润 + 25% 长期月费分成</title>
+  <meta property="og:title" content="ACO Studio Agency Partner Program — 30% Rev-Share + 25% Recurring MRR"/>
+  <meta property="og:description" content="Zero tech work for Shopify & Ad Agencies. Gift your clients a Free 1-SKU ChatGPT Shopping Proof and earn 30% upfront + 25% recurring."/>
+  <meta property="og:image" content="https://lufie.github.io/aco-readiness/cards/aco-partners-og.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#09090b",
+            "surface": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f3",
+            "surface-container": "#eeeeee",
+            "on-surface": "#1a1c1c",
+            "on-surface-variant": "#52525b",
+            "outline-variant": "#e4e4e7"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "code-sm": ["JetBrains Mono", "monospace"],
+            "code-lg": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html[data-lang="zh"] .lang-en { display: none !important; }
+    html[data-lang="en"] .lang-zh { display: none !important; }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .bg-dot-matrix {
+      background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .scanner-sweep {
+      animation: scanSweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes scanSweep {
+      0%, 100% { top: 4%; opacity: 0.95; }
+      50% { top: 94%; opacity: 0.95; }
+    }
+
+    /* Native Range Slider (modern-web-guidance: slider) */
+    input[type="range"] {
+      accent-color: #09090b;
+    }
+    input[type="range"]:focus-visible {
+      outline: 2px solid #09090b;
+      outline-offset: 4px;
+    }
+
+    /* Native Modal Dialog + Scroll Containment (modern-web-guidance: dialog + light-dismiss-a-dialog) */
+    dialog:modal {
+      overscroll-behavior: contain;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #e4e4e7;
+      border-radius: 1rem;
+      box-shadow: 0 24px 48px -12px rgba(9, 9, 11, 0.28);
+      max-width: 28rem;
+      width: calc(100% - 2rem);
+      background: #ffffff;
+      color: #09090b;
+    }
+    dialog::backdrop {
+      overflow: hidden;
+      overscroll-behavior: contain;
+      background-color: rgba(9, 9, 11, 0.55);
+      backdrop-filter: blur(3px);
+    }
+
+    /* Responsive Table (modern-web-guidance: responsive-table) */
+    .aco-table-region {
+      overflow: auto;
+      max-inline-size: 100%;
+      max-block-size: min(640px, 82vh);
+      container-type: inline-size;
+    }
+    .aco-table-region:focus-visible {
+      outline: 2px solid #09090b;
+      outline-offset: 2px;
+    }
+    .aco-table-region table {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .aco-table-region thead {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 2;
+    }
+    .aco-table-region tbody th {
+      position: sticky;
+      inset-inline-start: 0;
+      background: #ffffff;
+      z-index: 1;
+    }
+    @container (width < 600px) {
+      .aco-table-region table,
+      .aco-table-region thead,
+      .aco-table-region tbody,
+      .aco-table-region tr,
+      .aco-table-region th,
+      .aco-table-region td {
+        display: block;
+      }
+      .aco-table-region thead {
+        display: none;
+      }
+      .aco-table-region tbody tr {
+        margin-block-end: 0.75rem;
+        border-bottom: 1px solid #e4e4e7;
+        padding: 0.75rem 1rem;
+      }
+      .aco-table-region tbody th {
+        position: sticky;
+        inset-block-start: 0;
+        z-index: 2;
+        background: #f9f9f9;
+        padding: 0.35rem 0.5rem !important;
+        border-radius: 0.375rem;
+      }
+      .aco-table-region table {
+        --label-2: "Category";
+        --label-3: "AI Score";
+        --label-4: "GTIN Gap";
+        --label-5: "Action";
+      }
+      .aco-table-region tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.4rem 0 !important;
+        border: 0 !important;
+      }
+      .aco-table-region td:nth-child(2)::before { content: var(--label-2) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+      .aco-table-region td:nth-child(3)::before { content: var(--label-3) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+      .aco-table-region td:nth-child(4)::before { content: var(--label-4) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+      .aco-table-region td:nth-child(5)::before { content: var(--label-5) ": "; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: #71717a; }
+    }
+
+    /* Form Validation After Interaction (modern-web-guidance: validate-input-after-interaction) */
+    .error-msg { display: none; color: #dc2626; font-size: 0.75rem; margin-top: 0.375rem; }
+    :is(:user-invalid, .user-invalid-fallback) {
+      border-color: #dc2626 !important;
+      background-color: #fef2f2 !important;
+    }
+    .input-wrap:has(:is(:user-invalid, .user-invalid-fallback)) + .error-msg,
+    :is(:user-invalid, .user-invalid-fallback) + .error-msg {
+      display: block;
+    }
+    input:user-valid { border-color: #059669 !important; }
+    .visually-hidden:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    /* Compact Auto-Hiding Sticky Top Bar (modern-web-guidance: content-first-noise-reduction) */
+    html {
+      container-type: scroll-state;
+    }
+    .top-bar {
+      transition: transform 0.22s ease;
+    }
+    @container scroll-state((scrolled: bottom) and (scrollable: top)) {
+      .top-bar {
+        transform: translateY(-100%);
+      }
+    }
+    .top-bar:focus-within,
+    .top-bar.is-visible {
+      transform: none;
+    }
+    .top-bar.is-hidden:not(:focus-within) {
+      transform: translateY(-100%);
+    }
+    :target {
+      scroll-margin-top: 4.25rem;
+    }
+
+    /* Accessible Details Accordion (modern-web-guidance: accordion) */
+    summary.aco-summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.65ch;
+      cursor: pointer;
+    }
+    summary.aco-summary::-webkit-details-marker {
+      display: none;
+    }
+    summary.aco-summary::before {
+      content: "";
+      inline-size: 1em;
+      block-size: 1em;
+      flex-shrink: 0;
+      background-color: currentColor;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat center / contain;
+      rotate: -90deg;
+    }
+    details.aco-item[open] > summary.aco-summary::before {
+      rotate: 0deg;
+    }
+    details.aco-item::details-content {
+      interpolate-size: allow-keywords;
+      overflow: clip;
+      contain: layout;
+    }
+    details.aco-item:not([open])::details-content {
+      block-size: 0;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      summary.aco-summary::before {
+        transition: rotate 0.2s;
+      }
+      details.aco-item::details-content {
+        transition: block-size 0.25s ease-in-out, content-visibility 0.25s ease-in-out, display 0.25s ease-in-out;
+        transition-behavior: allow-discrete;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#fafafa] text-on-surface font-body-md antialiased selection:bg-black selection:text-white bg-dot-matrix">
+  <!-- STICKY HEADER -->
+  <header class="top-bar sticky top-0 z-40 flex items-center justify-between w-full h-14 px-4 md:px-10 border-b border-outline-variant bg-white/90 backdrop-blur-md">
+    <a href="../" class="flex items-center gap-2.5">
+      <div class="w-7 h-7 bg-primary flex items-center justify-center rounded-md">
+        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <span class="font-bold text-base tracking-tight text-primary">ACO Studio</span>
+      <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded border border-emerald-300 bg-emerald-50 font-code-sm text-[11px] font-bold text-emerald-800">
+        PARTNER · 30% REV-SHARE
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6 text-xs font-medium">
+      <a class="text-primary font-semibold" href="#calc"><span class="lang-zh">分润测算器</span><span class="lang-en">Commission Calc</span></a>
+      <a class="text-on-surface-variant hover:text-primary" href="#flow"><span class="lang-zh">白标合作流程</span><span class="lang-en">White-Label Flow</span></a>
+      <a class="text-on-surface-variant hover:text-primary" href="../delivery-demo/"><span class="lang-zh">查看客户交付物</span><span class="lang-en">Client Showcase</span></a>
+      <a class="text-on-surface-variant hover:text-primary" href="../"><span class="lang-zh">20 品牌实测榜</span><span class="lang-en">20-Brand Index</span></a>
+    </nav>
+
+    <div class="flex items-center gap-2.5">
+      <div class="flex items-center border border-outline-variant rounded-md bg-surface-container-low p-0.5 font-code-sm text-xs">
+        <button type="button" id="btn-zh" onclick="setPartnerLang('zh')" class="px-2 py-0.5 bg-white text-primary rounded font-semibold shadow-sm">中文</button>
+        <button type="button" id="btn-en" onclick="setPartnerLang('en')" class="px-2 py-0.5 text-on-surface-variant hover:text-primary">EN</button>
+      </div>
+      <button type="button" onclick="openPartnerModal()" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-primary text-white hover:bg-neutral-800 transition-all text-xs font-semibold shadow-sm cursor-pointer">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="lang-zh">免费领 3 家客户诊断包 →</span>
+        <span class="lang-en">Free 3-Client Audit Kit →</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. HERO + AGENCY COMMISSION CALCULATOR -->
+  <section class="pt-10 md:pt-14 pb-14 px-4 md:px-10 max-w-7xl mx-auto border-b border-outline-variant" id="calc">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-5 space-y-5">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span class="font-code-sm text-xs font-semibold text-emerald-900 lang-zh">面向 Shopify 建站商 / Meta&amp;Google 投流代运营 / 出海顾问</span>
+          <span class="font-code-sm text-xs font-semibold text-emerald-900 lang-en">For Shopify Agencies, Media Buyers &amp; DTC Consultants</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight leading-[1.15]">
+          <span class="lang-zh">广告投流越来越贵？给存量客户送上“AI 免流订单包”，躺拿 30% 现金分润</span>
+          <span class="lang-en">Ad ROAS Dropping? Offer Clients Free AI Orders—Keep 30% Cash + 25% MRR</span>
+        </h1>
+
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          <span class="lang-zh">不占贵司 1 分钟研发资源！我们作为幕后白标技术团队 7 天无损交付，帮您的存量客户冲上 ChatGPT 首推购买卡，每成一单当日结算 <strong>30% 现金佣金 + 25% 包月续费分成</strong>。</span>
+          <span class="lang-en">Zero engineering lift for your agency. We fulfill 100% white-label in 7 days (zero theme edits), paying you <strong>30% upfront commission + 25% recurring MRR</strong> on every client store.</span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="button" onclick="openPartnerModal()" class="inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-neutral-800 transition-all shadow-sm cursor-pointer">
+            <span class="lang-zh">免费为我的 3 家客户生成截流报告 →</span>
+            <span class="lang-en">Get 3 Free Client Hijack Reports →</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Interactive Agency Commission & MRR Calculator -->
+      <div class="lg:col-span-7 bg-white border-2 border-primary rounded-2xl p-6 sm:p-7 shadow-lg space-y-5">
+        <div class="flex items-center justify-between border-b border-outline-variant pb-3.5">
+          <div>
+            <span class="font-code-sm text-xs text-emerald-700 font-bold uppercase">AGENCY REVENUE SIMULATOR</span>
+            <h2 class="text-lg font-extrabold text-primary mt-0.5">
+              <span class="lang-zh">拖动测算：您的存量客户池能变现多少纯利？</span>
+              <span class="lang-en">Calculate Your Agency Passive Profit</span>
+            </h2>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 font-code-sm text-xs font-bold text-emerald-800">0 交付成本</span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#fafafa] border border-outline-variant">
+          <div class="flex justify-between items-center mb-2">
+            <label for="agencySlider" class="font-code-sm text-xs font-semibold text-primary">
+              <span class="lang-zh">每月转介绍成交客户数（1–20 家独立站）：</span>
+              <span class="lang-en">Referred Full-Turnkey Clients per Month:</span>
+            </label>
+            <span class="font-code-lg text-base font-extrabold text-primary" id="clientCountLabel">5 家 / 月</span>
+          </div>
+          <input
+            type="range"
+            id="agencySlider"
+            min="1"
+            max="20"
+            step="1"
+            value="5"
+            aria-valuetext="5 client stores per month"
+            oninput="updatePartnerCalc(this.value)"
+            class="w-full cursor-pointer"
+          />
+          <div class="flex justify-between text-xs font-code-sm text-on-surface-variant mt-1">
+            <span>1 store/mo</span>
+            <span>10 stores/mo</span>
+            <span>20 stores/mo</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-[#09090b] text-white space-y-1">
+            <span class="font-code-sm text-xs text-neutral-400 block">
+              <span class="lang-zh">首单 30% 现结佣金（¥2,940 / 单）：</span>
+              <span class="lang-en">30% Upfront Commission ($450 / store):</span>
+            </span>
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-code-lg" id="upfrontShareLabel">¥14,700 / 月</div>
+            <span class="font-code-sm text-[11px] text-neutral-300 block">
+              <span class="lang-zh">客户打款当日现结 · 纯利润</span><span class="lang-en">Paid same day upon client signoff</span>
+            </span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200 space-y-1">
+            <span class="font-code-sm text-xs text-emerald-900 block">
+              <span class="lang-zh">叠加 25% 包月续费长尾分成：</span>
+              <span class="lang-en">+ 25% Recurring Care MRR Share:</span>
+            </span>
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-800 font-code-lg" id="mrrShareLabel">+¥14,700 / 年</div>
+            <span class="font-code-sm text-[11px] text-emerald-700 block">
+              <span class="lang-zh">客户续订 ACO Care 期间月月躺拿</span><span class="lang-en">Passive recurring monthly share</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 3-STEP WHITE-LABEL VISUAL WORKFLOW -->
+  <section class="py-14 px-4 md:px-10 max-w-7xl mx-auto" id="flow">
+    <h2 class="text-2xl font-extrabold text-primary text-center mb-8">
+      <span class="lang-zh">3 步零负担合作：您只管发报告收钱，重活全归我们</span>
+      <span class="lang-en">3-Step Zero-Lift Co-Selling Workflow</span>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border border-outline-variant rounded-2xl p-6 space-y-2.5 shadow-sm">
+        <span class="font-code-sm text-xs font-bold px-2.5 py-0.5 rounded bg-surface-container text-primary">STEP 01 · FREE HOOK</span>
+        <h3 class="font-bold text-base text-primary"><span class="lang-zh">发我们 3 个老客户域名</span><span class="lang-en">Send 3 Client Domains</span></h3>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          <span class="lang-zh">24h 内我们免费生成这 3 家店铺专属的《ChatGPT 竞品截流对比图 + 在线实测页》，您只需微信甩给客户老板看一眼即可破冰。</span>
+          <span class="lang-en">Within 24h we hand you custom Competitor Hijack Battlecards + live audit URLs for your clients—ready to drop in Slack or email.</span>
+        </p>
+      </div>
+      <div class="bg-white border border-outline-variant rounded-2xl p-6 space-y-2.5 shadow-sm">
+        <span class="font-code-sm text-xs font-bold px-2.5 py-0.5 rounded bg-surface-container text-primary">STEP 02 · WHITE-LABEL</span>
+        <h3 class="font-bold text-base text-primary"><span class="lang-zh">7 天幕后白标无损交付</span><span class="lang-en">7-Day White-Label Delivery</span></h3>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          <span class="lang-zh">支持以贵司名义白标交付或联合署名。不动客户现有建站主题 1 像素、不要后台主密码，合同兜底 Google 核验不达 90+ 分全退。</span>
+          <span class="lang-en">Co-branded or 100% white-label under your agency name. Zero theme edits, zero admin passwords, backed by our 90+ score refund guarantee.</span>
+        </p>
+      </div>
+      <div class="bg-[#09090b] text-white rounded-2xl p-6 space-y-2.5 shadow-md">
+        <span class="font-code-sm text-xs font-bold px-2.5 py-0.5 rounded bg-emerald-500 text-black">STEP 03 · INSTANT PAYOUT</span>
+        <h3 class="font-bold text-base"><span class="lang-zh">当日现结 30% + 长期 25%</span><span class="lang-en">30% Instant + 25% MRR</span></h3>
+        <p class="text-xs text-neutral-300 leading-relaxed">
+          <span class="lang-zh">不仅拿 ¥2,940/单（$450）首单分润，还帮您的投流团队提升客户整站信任度与自然转化，客户粘性翻倍！</span>
+          <span class="lang-en">Earn $450 per turnkey store upfront + 25% of ongoing $149/mo Care subscriptions while boosting client retention.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-outline-variant px-4 md:px-10 py-8 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-code-sm text-on-surface-variant">
+      <div>© 2026 ACO STUDIO · CHANNEL PARTNER INFRASTRUCTURE</div>
+      <div class="flex flex-wrap gap-6">
+        <a href="../" class="hover:text-primary">← Back to Main Scanner</a>
+        <a href="../delivery-demo/" class="hover:text-primary">7-Day Delivery Showcase</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Partner Onboarding Native Modal Dialog -->
+  <dialog id="partnerModal" closedby="any" aria-labelledby="partnerModalTitle">
+    <div class="p-6 space-y-4">
+      <div class="flex items-start justify-between gap-3 pb-3 border-b border-outline-variant">
+        <div>
+          <span class="font-code-sm text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded font-semibold">FREE AGENCY KIT</span>
+          <h2 id="partnerModalTitle" class="text-base font-bold text-primary mt-1">免费申请 3 家存量客户截流诊断包</h2>
+        </div>
+        <form method="dialog">
+          <button type="submit" value="cancel" aria-label="Close modal" class="p-1 rounded text-neutral-400 hover:text-primary cursor-pointer">✕</button>
+        </form>
+      </div>
+
+      <form onsubmit="submitPartnerForm(event)" class="space-y-3 text-xs">
+        <div>
+          <label for="agName" class="block font-semibold text-primary mb-1"><span class="lang-zh">机构名称 / 您的称呼</span><span class="lang-en">Agency Name &amp; Your Name</span></label>
+          <input id="agName" type="text" required autofocus placeholder="e.g. GrowthLab / 张总" class="w-full px-3 py-2 border border-outline-variant rounded-lg font-code-sm text-xs text-primary"/>
+        </div>
+        <div>
+          <label for="agClients" class="block font-semibold text-primary mb-1"><span class="lang-zh">想先免费试测的 1–3 个客户独立站域名</span><span class="lang-en">1–3 Sample Client Domains for Free Audit</span></label>
+          <input id="agClients" type="text" required placeholder="client1.com, client2.com" class="w-full px-3 py-2 border border-outline-variant rounded-lg font-code-sm text-xs text-primary"/>
+        </div>
+        <div>
+          <label for="agContact" class="block font-semibold text-primary mb-1"><span class="lang-zh">接收白标诊断包的 微信 / 邮箱</span><span class="lang-en">WeChat / Email / WhatsApp</span></label>
+          <input id="agContact" type="text" required placeholder="WeChat ID or agency@domain.com" class="w-full px-3 py-2 border border-outline-variant rounded-lg font-code-sm text-xs text-primary"/>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm hover:bg-neutral-800 cursor-pointer">
+          <span class="lang-zh">生成渠道合作专属工单 →</span><span class="lang-en">Generate Partner Kit Ticket →</span>
+        </button>
+      </form>
+
+      <div id="agTicketBox" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-2.5 text-xs">
+        <div class="font-bold text-emerald-900">✓ 工单已自动复制！可直接粘贴回复顾问或点右侧在线提单：</div>
+        <pre id="agTicketText" class="p-2.5 rounded bg-white border border-emerald-200 font-code-sm text-[11px] text-primary whitespace-pre-wrap"></pre>
+        <div class="grid grid-cols-2 gap-2">
+          <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('agTicketText').textContent); this.textContent='Copied ✓'" class="py-2 px-3 rounded-lg bg-primary text-white font-semibold text-xs cursor-pointer">复制工单回传顾问</button>
+          <a id="agMailto" href="#" target="_blank" rel="noopener" class="py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs text-center">在线提交合作工单 ↗</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    function setPartnerLang(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      document.getElementById('btn-zh').className = lang === 'zh' ? 'px-2 py-0.5 bg-white text-primary rounded font-semibold shadow-sm' : 'px-2 py-0.5 text-on-surface-variant hover:text-primary';
+      document.getElementById('btn-en').className = lang === 'en' ? 'px-2 py-0.5 bg-white text-primary rounded font-semibold shadow-sm' : 'px-2 py-0.5 text-on-surface-variant hover:text-primary';
+      updatePartnerCalc(document.getElementById('agencySlider').value);
+    }
+
+    function updatePartnerCalc(val) {
+      const n = parseInt(val, 10);
+      const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+      const slider = document.getElementById('agencySlider');
+      slider.setAttribute('aria-valuetext', n + ' client stores per month');
+      slider.style.setProperty('--control-value', String(n));
+      if (lang === 'zh') {
+        document.getElementById('clientCountLabel').textContent = n + ' 家 / 月';
+        document.getElementById('upfrontShareLabel').textContent = '¥' + (n * 2940).toLocaleString() + ' / 月';
+        document.getElementById('mrrShareLabel').textContent = '+¥' + (n * 245 * 12).toLocaleString() + ' / 年';
+      } else {
+        document.getElementById('clientCountLabel').textContent = n + ' stores / mo';
+        document.getElementById('upfrontShareLabel').textContent = '$' + (n * 450).toLocaleString() + ' / mo';
+        document.getElementById('mrrShareLabel').textContent = '+$' + (n * 37 * 12).toLocaleString() + ' / yr';
+      }
+    }
+
+    function openPartnerModal() {
+      document.getElementById('agTicketBox').classList.add('hidden');
+      document.getElementById('partnerModal').showModal();
+    }
+
+    function submitPartnerForm(e) {
+      e.preventDefault();
+      const ag = document.getElementById('agName').value.trim();
+      const cls = document.getElementById('agClients').value.trim();
+      const ct = document.getElementById('agContact').value.trim();
+      const txt = `[ACO 30% Partner Application]\nAgency: ${ag}\nSample Clients: ${cls}\nContact: ${ct}`;
+      document.getElementById('agTicketText').textContent = txt;
+      document.getElementById('agMailto').href = 'https://github.com/lufie/aco-readiness/issues/new?title=' + encodeURIComponent('[30% Partner] ' + ag) + '&body=' + encodeURIComponent(txt);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).catch(() => {});
+      }
+      document.getElementById('agTicketBox').classList.remove('hidden');
+    }
+
+    (function() {
+      const dialog = document.getElementById('partnerModal');
+      if (dialog && !('closedBy' in HTMLDialogElement.prototype)) {
+        dialog.addEventListener('click', (event) => {
+          if (event.target !== dialog) return;
+          const rect = dialog.getBoundingClientRect();
+          const inside = rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+          if (!inside) dialog.close();
+        });
+      }
+      dialog.addEventListener('close', () => { dialog.returnValue = ''; });
+
+      if (!CSS.supports('container-type', 'scroll-state')) {
+        const bar = document.querySelector('.top-bar');
+        let lastY = scrollY;
+        addEventListener('scroll', () => {
+          const y = Math.max(0, Math.min(scrollY, document.documentElement.scrollHeight - innerHeight));
+          if (y === lastY) return;
+          bar?.classList.toggle('is-hidden', y > lastY && y > bar.offsetHeight);
+          lastY = y;
+        }, { passive: true });
+      }
+    })();
+
+    updatePartnerCalc(5);
+  </script>
+</body>
+</html>

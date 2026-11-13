@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <title>CEO 触达作战台 — 20品牌截流配图 + 4大高回复发送模版 | ACO Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Accessible Single-Row Scrollable Tabs with Non-Color Indicator (modern-web-guidance: tabs) */
+    .aco-tablist {
+      display: flex;
+      overflow-x: auto;
+      border-bottom: 1px solid #e4e4e7;
+      gap: 0.25rem;
+      scrollbar-width: none;
+    }
+    .aco-tablist::-webkit-scrollbar { display: none; }
+    .aco-tablist [role="tab"] {
+      flex: none;
+      position: relative;
+      padding: 0.75rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #52525b;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .aco-tablist [role="tab"][aria-selected="true"] {
+      color: #09090b;
+    }
+    .aco-tablist [role="tab"][aria-selected="true"]::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      border-block-end: 3px solid #09090b;
+    }
+    .aco-tablist [role="tab"]:focus-visible {
+      outline: 2px solid #09090b;
+      outline-offset: -2px;
+    }
+    /* Put all padding/borders on inner wrapper inside [role="tabpanel"] so hidden="until-found" renders zero empty strip! */
+    .aco-tabpanel-inner {
+      padding-top: 1.25rem;
+    }
+  </style>
+</head>
+<body class="bg-[#fafafa] text-[#09090b] font-sans antialiased p-4 md:p-8">
+  <div class="max-w-7xl mx-auto space-y-6">
+    <!-- Top Executive Banner -->
+    <header class="bg-white border border-[#e4e4e7] rounded-2xl p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 shadow-sm">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-mono text-xs font-bold">CEO OUTREACH CONSOLE v4</span>
+          <span class="text-xs font-mono text-[#52525b]">1张截流对比图 + 3句话钩子 = 最高回复率</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">ACO Studio · 客户与渠道发送模版作战台</h1>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xs font-semibold">
+        <a href="https://lufie.github.io/aco-readiness/" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-xl border border-[#e4e4e7] bg-[#fafafa] hover:border-black">打开线上总站 ↗</a>
+        <a href="https://lufie.github.io/aco-readiness/partners/" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-xl bg-[#09090b] text-white hover:bg-neutral-800">打开 30% 渠道分润页 ↗</a>
+      </div>
+    </header>
+
+    <!-- 3-Step Foolproof Guide -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+      <div class="bg-white border border-[#e4e4e7] rounded-xl p-3.5 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-full bg-[#09090b] text-white font-mono font-bold flex items-center justify-center shrink-0">1</span>
+        <div><strong>选品牌 &amp; 存配图</strong>：在左侧点选目标品牌，点击「下载高清截流图」或直接右键复制配图。</div>
+      </div>
+      <div class="bg-white border border-[#e4e4e7] rounded-xl p-3.5 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-full bg-[#09090b] text-white font-mono font-bold flex items-center justify-center shrink-0">2</span>
+        <div><strong>一键复制 3 句话</strong>：右侧已自动填好该品牌的分数、截流竞品名与专属诊断链接，点「一键复制正文」。</div>
+      </div>
+      <div class="bg-white border border-[#e4e4e7] rounded-xl p-3.5 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-mono font-bold flex items-center justify-center shrink-0">3</span>
+        <div><strong>先贴图、再贴字</strong>：发微信/LinkedIn/邮件时<strong>把截流图放第一屏</strong>，客户回 <code>1</code> 即锁定意向！</div>
+      </div>
+    </div>
+
+    <!-- Main 12-Col Split Workspace -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <!-- Left 5 Cols: 20-Brand Selector + Bespoke 1200x630 Visual Battlecard Preview -->
+      <div class="lg:col-span-5 bg-white border border-[#e4e4e7] rounded-2xl p-5 space-y-4 shadow-sm">
+        <div class="flex items-center justify-between">
+          <label for="brandSelect" class="text-xs font-bold uppercase font-mono text-[#52525b]">1. 选择目标独立站 (20 家已实测)</label>
+          <div class="inline-flex rounded-lg border border-[#e4e4e7] p-0.5 text-xs font-mono">
+            <button type="button" id="tplLangZh" onclick="setTplLang('zh')" class="px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer">中文话术</button>
+            <button type="button" id="tplLangEn" onclick="setTplLang('en')" class="px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer">EN Script</button>
+          </div>
+        </div>
+
+        <select id="brandSelect" onchange="selectBrand(this.value)" class="w-full px-3 py-2.5 rounded-xl border-2 border-[#09090b] font-mono text-xs sm:text-sm font-semibold bg-white cursor-pointer"></select>
+
+        <!-- Quick Filter Pills -->
+        <div class="flex flex-wrap gap-1.5 text-xs font-mono" id="quickBrandPills"></div>
+
+        <!-- Visual Battlecard Preview (Reserved 1200x630 aspect ratio to prevent layout shift) -->
+        <div class="space-y-2 pt-1">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-semibold">第一屏必贴配图（竞品截流实测卡）：</span>
+            <a id="downloadCardBtn" href="#" target="_blank" rel="noopener" download class="font-mono font-bold text-emerald-700 underline">⬇ 下载/打开原图 (.png)</a>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-[#e4e4e7] bg-[#fafafa]">
+            <img id="battlecardImg" src="" alt="Brand ChatGPT Shopping Hijack Card" width="1200" height="630" class="w-full h-auto block"/>
+          </div>
+        </div>
+
+        <!-- Direct Contact & LinkedIn Search Shortcuts -->
+        <div class="p-3.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7] space-y-2.5 text-xs">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-[#09090b]">已核实官网真实联系通道 &amp; 关键人情报</span>
+            <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold" id="hqBadge"></span>
+          </div>
+          <div class="p-2.5 rounded-lg bg-white border border-[#e4e4e7] space-y-1">
+            <div class="font-mono font-bold text-emerald-800 break-all" id="verifiedEmailsLine"></div>
+            <div class="text-xs text-[#52525b] leading-snug" id="execIntelLine"></div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <a id="linkedinSearchBtn" href="#" target="_blank" rel="noopener" class="py-2 px-2 rounded-lg bg-[#09090b] text-white font-semibold text-center">🔍 搜关键人 ↗</a>
+            <a id="contactPageBtn" href="#" target="_blank" rel="noopener" class="py-2 px-2 rounded-lg border border-[#e4e4e7] bg-white font-semibold text-center">📋 官网表单 ↗</a>
+            <a id="auditPageBtn" href="#" target="_blank" rel="noopener" class="py-2 px-2 rounded-lg border border-[#e4e4e7] bg-white font-semibold text-center">🔗 诊断页 ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 7 Cols: 4 Tabbed High-Reply Templates -->
+      <div class="lg:col-span-7 bg-white border-2 border-[#09090b] rounded-2xl p-5 sm:p-6 shadow-md">
+        <div class="aco-tablist" role="tablist" focusgroup="tablist nomemory" aria-label="发送话术场景切换">
+          <button type="button" role="tab" id="tab-1" aria-selected="true" tabindex="0" focusgroupstart onclick="activateTab(1)">① 首轮破冰 (1图+3句话)</button>
+          <button type="button" role="tab" id="tab-2" aria-selected="false" tabindex="-1" onclick="activateTab(2)">② 48h 未回轻推</button>
+          <button type="button" role="tab" id="tab-3" aria-selected="false" tabindex="-1" onclick="activateTab(3)">③ 打样交付 &amp; 锁单</button>
+          <button type="button" role="tab" id="tab-4" aria-selected="false" tabindex="-1" onclick="activateTab(4)">④ 招募 30% 渠道合伙人</button>
+        </div>
+
+        <!-- TAB PANEL 1: COLD BREAKTHROUGH -->
+        <div role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+          <div class="aco-tabpanel-inner space-y-4">
+            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-950">
+              <strong>💡 一号位发送心法：</strong>点下方绿色「✉️ 一键唤起邮件客户端」会自动填入该店<strong>官网已核实的真实商务邮箱</strong>、标题与正文；你只需把左侧下载的高清截流图拖进邮件第一行点发送！
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-[#52525b] font-mono">邮件标题 / Subject Line（发微信或私信可免填）</span>
+                <button type="button" onclick="copyText('tpl1Subject', this)" class="px-3 py-1 rounded-lg bg-[#f3f3f3] hover:bg-[#09090b] hover:text-white font-semibold text-xs cursor-pointer">一键复制标题</button>
+              </div>
+              <input id="tpl1Subject" type="text" readonly class="w-full px-3 py-2 rounded-lg border border-[#e4e4e7] bg-[#fafafa] font-mono text-xs font-semibold"/>
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span class="font-bold text-[#52525b] font-mono">3 句话极简破冰正文（已自动填入该品牌真实漏洞）</span>
+                <div class="flex gap-2">
+                  <button type="button" onclick="copyText('tpl1Body', this)" class="px-3 py-1.5 rounded-lg bg-[#09090b] text-white hover:bg-neutral-800 font-semibold text-xs cursor-pointer">复制正文</button>
+                  <a id="tpl1Mailto" href="#" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 font-semibold text-xs">✉️ 一键唤起邮件草稿 ↗</a>
+                </div>
+              </div>
+              <textarea id="tpl1Body" oninput="syncMailtoLinks()" rows="9" class="w-full p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-xs sm:text-sm leading-relaxed font-sans"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB PANEL 2: 48H FOLLOW-UP BUMP -->
+        <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="until-found">
+          <div class="aco-tabpanel-inner space-y-4">
+            <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950">
+              <strong>💡 48 小时追单心法：</strong>40% 的 B 端回复来自第 2 条轻推！不要问“看到我消息了吗”，直接问“要不要把做好的补丁发您技术看一眼”，零压力极易回。
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span class="font-bold text-[#52525b] font-mono">1 句话无压跟进正文（直接回复上一封邮件或微信轻敲）</span>
+                <div class="flex gap-2">
+                  <button type="button" onclick="copyText('tpl2Body', this)" class="px-3 py-1.5 rounded-lg bg-[#09090b] text-white hover:bg-neutral-800 font-semibold text-xs cursor-pointer">复制追单话术</button>
+                  <a id="tpl2Mailto" href="#" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 font-semibold text-xs">✉️ 唤起跟进邮件 ↗</a>
+                </div>
+              </div>
+              <textarea id="tpl2Body" oninput="syncMailtoLinks()" rows="6" class="w-full p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-xs sm:text-sm leading-relaxed font-sans"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB PANEL 3: FREE PROOF DELIVERY -> PAID CLOSE -->
+        <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden="until-found">
+          <div class="aco-tabpanel-inner space-y-4">
+            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-950">
+              <strong>💡 逼单升单心法：</strong>客户回 <code>1</code> 后，用本地脚本 10 秒生成单品补丁并截图发他，顺势抛出「¥1,980 极速体验（可全额抵扣） vs ¥9,800 全包（送首月 ¥980 护航）」二选一，把“买不买”变成“选哪个”！
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span class="font-bold text-[#52525b] font-mono">免费打样交付 &amp; 二选一锁单话术</span>
+                <div class="flex gap-2">
+                  <button type="button" onclick="copyText('tpl3Body', this)" class="px-3 py-1.5 rounded-lg bg-[#09090b] text-white hover:bg-neutral-800 font-semibold text-xs cursor-pointer">复制锁单话术</button>
+                  <a id="tpl3Mailto" href="#" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 font-semibold text-xs">✉️ 唤起交付邮件 ↗</a>
+                </div>
+              </div>
+              <textarea id="tpl3Body" oninput="syncMailtoLinks()" rows="10" class="w-full p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-xs sm:text-sm leading-relaxed font-sans"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB PANEL 4: 30% AGENCY CHANNEL PARTNER OUTREACH -->
+        <div role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden="until-found">
+          <div class="aco-tabpanel-inner space-y-4">
+            <div class="p-3 rounded-xl bg-[#09090b] text-white text-xs">
+              <strong>🚀 10 倍速杠杆打法（已内置 8 家已核实邮箱的 Shopify Plus 服务商）：</strong>搞定 1 家建站/投流代理商 = 批量拿下他手里的 20 家独立站客户！
+            </div>
+            <div class="p-3.5 rounded-xl bg-[#fafafa] border border-[#e4e4e7] space-y-2 text-xs">
+              <label for="agencySelect" class="font-bold font-mono text-[#09090b] block">选择首批已核实官方邮箱的 Shopify 服务商（8 家精选）：</label>
+              <select id="agencySelect" onchange="selectAgency(this.value)" class="w-full px-3 py-2 rounded-lg border border-[#09090b] bg-white font-mono text-xs font-semibold cursor-pointer"></select>
+              <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+                <span class="font-mono font-bold text-emerald-800" id="agencyEmailLine"></span>
+                <div class="flex gap-2">
+                  <a id="agencySiteBtn" href="#" target="_blank" rel="noopener" class="underline font-semibold">机构官网 ↗</a>
+                  <a id="agencyLinkedinBtn" href="#" target="_blank" rel="noopener" class="underline font-semibold">LinkedIn 搜老板 ↗</a>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-[#52525b] font-mono">渠道合伙邮件标题 / Subject</span>
+                <button type="button" onclick="copyText('tpl4Subject', this)" class="px-3 py-1 rounded-lg bg-[#f3f3f3] hover:bg-[#09090b] hover:text-white font-semibold text-xs cursor-pointer">一键复制标题</button>
+              </div>
+              <input id="tpl4Subject" type="text" readonly class="w-full px-3 py-2 rounded-lg border border-[#e4e4e7] bg-[#fafafa] font-mono text-xs font-semibold"/>
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span class="font-bold text-[#52525b] font-mono">30% 现金分润 + 免费帮测 3 家老客户招募话术</span>
+                <div class="flex gap-2">
+                  <button type="button" onclick="copyText('tpl4Body', this)" class="px-3 py-1.5 rounded-lg bg-[#09090b] text-white hover:bg-neutral-800 font-semibold text-xs cursor-pointer">复制渠道话术</button>
+                  <a id="tpl4Mailto" href="#" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 font-semibold text-xs">✉️ 一键唤起渠道邮件 ↗</a>
+                </div>
+              </div>
+              <textarea id="tpl4Body" oninput="syncMailtoLinks()" rows="9" class="w-full p-3.5 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-xs sm:text-sm leading-relaxed font-sans"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const BRANDS = [{"slug": "fanttik-com", "domain": "fanttik.com", "root_domain": "fanttik.com", "brand": "Fanttik", "hq": "深圳", "emails": ["marketing@fanttik.com", "sales@fanttik.com", "support@fanttik.com"], "contact_url": "https://fanttik.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=fanttik%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "创始人 & CEO: Bo Du（深圳傲斯顿科技创新，LinkedIn 搜 'Bo Du Fanttik' 或独立站营销总监）", "score": 53, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Shark Official Cordless HandVac", "sku": "Fanttik Cruise V11 Pet Cordless Handheld Vacuum", "prompt_zh": "“推荐一款吸力强、能吸宠物毛且美区 3 天内送达的无线车载吸尘器，预算 $160 内”", "prompt_en": "“Best cordless handheld car & pet vacuum under $160 with guaranteed 3-day US delivery”", "spec_chip": "16,000Pa / HEPA", "report_url": "https://lufie.github.io/aco-readiness/r/fanttik-com/"}, {"slug": "munbyn-com", "domain": "munbyn.com", "root_domain": "munbyn.com", "brand": "MUNBYN", "hq": "广州/深圳", "emails": ["sales2@munbyn.com", "support@munbyn.com"], "contact_url": "https://munbyn.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=munbyn%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：广州易佰 / MUNBYN 信息技术（优先发 sales2@munbyn.com + LinkedIn 搜 MUNBYN Ecommerce）", "score": 60, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Rollo Official Wireless Printer", "sku": "MUNBYN x Kemimoto 2-in-1 Detachable Liner CE Armor All Season Motorcycle Jacket", "prompt_zh": "“推荐一款支持 Shopify/USPS 4x6 热敏面单、美区 3 日达的高清蓝牙打单机”", "prompt_en": "“Best wireless 4x6 thermal shipping label printer for Shopify with 3-day US shipping”", "spec_chip": "300 DPI / 4x6", "report_url": "https://lufie.github.io/aco-readiness/r/munbyn-com/"}, {"slug": "bougerv-com", "domain": "bougerv.com", "root_domain": "bougerv.com", "brand": "BougeRV", "hq": "广州/深圳", "emails": ["marketing@bougerv.com", "support@bougerv.com"], "contact_url": "https://bougerv.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=bougerv%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "CEO: Michael Jia（广州/深圳博格户外，LinkedIn 搜 'Michael Jia BougeRV'）", "score": 55, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Dometic / EcoFlow Official Cooler", "sku": "BougeRV ECW1.5.2 Foldable Utility Electric Camping Wagon with 133Wh Battery", "prompt_zh": "“推荐一款适合露营皮卡使用、低功耗且美区 3 天内能送到的 12V 车载冰箱”", "prompt_en": "“Best 12V portable car refrigerator for truck camping with fast 3-day US shipping”", "spec_chip": "12V / -4°F~68°F", "report_url": "https://lufie.github.io/aco-readiness/r/bougerv-com/"}, {"slug": "ipitaka-com", "domain": "ipitaka.com", "root_domain": "ipitaka.com", "brand": "PITAKA", "hq": "深圳", "emails": ["sales@ipitaka.com", "distributor@ipitaka.com"], "contact_url": "https://ipitaka.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=ipitaka%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳零壹创新 PITAKA（独立站设计感极强，对『0像素无损挂载』买单意愿极高）", "score": 53, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Mous / Nomad Official MagSafe Case", "sku": "Luminous Ode Phone Cases", "prompt_zh": "“推荐一款超薄凯夫拉芳纶纤维、强磁吸且美区现货速发的旗舰手机壳”", "prompt_en": "“Ultra-thin aramid fiber MagSafe case under $75 with verified 3-day US delivery”", "spec_chip": "1500D Aramid / MagSafe", "report_url": "https://lufie.github.io/aco-readiness/r/ipitaka-com/"}, {"slug": "ulanzi-com", "domain": "ulanzi.com", "root_domain": "ulanzi.com", "brand": "Ulanzi", "hq": "深圳", "emails": ["marketing@ulanzi.com", "codesign@ulanzi.com"], "contact_url": "https://www.ulanzi.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=ulanzi%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳优篮子科技（摄影配件高频标品，优先发 marketing@ulanzi.com / codesign@ulanzi.com）", "score": 45, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Peak Design Official Travel Tripod", "sku": "Ulanzi Zero Y Carbon Fiber Travel Tripod", "prompt_zh": "“推荐一款快装碳纤维旅行三脚架，承重稳且美区 3 天内可送达”", "prompt_en": "“Best lightweight carbon fiber travel tripod with quick-release & 3-day US delivery”", "spec_chip": "Carbon / Arca-Swiss", "report_url": "https://lufie.github.io/aco-readiness/r/ulanzi-com/"}, {"slug": "maono-com", "domain": "maono.com", "root_domain": "maono.com", "brand": "MAONO", "hq": "深圳", "emails": ["business@maono.com", "marketing@maono.com"], "contact_url": "https://www.maono.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=maono%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳闪克科技 MAONO（官方商务直达邮箱 business@maono.com）", "score": 53, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Shure / Røde Official USB Mic", "sku": "MAONO T1 mini Pro Wireless Lavalier Microphone【Pre Order】", "prompt_zh": "“推荐一款免声卡直连电脑、带降噪且美区 3 日达的播客动圈麦克风，预算 $100 内”", "prompt_en": "“Best USB/XLR dynamic podcast microphone under $100 with 3-day US shipping”", "spec_chip": "XLR+USB / -30dB ENC", "report_url": "https://lufie.github.io/aco-readiness/r/maono-com/"}, {"slug": "emeet-com", "domain": "emeet.com", "root_domain": "emeet.com", "brand": "EMEET", "hq": "深圳", "emails": ["dtc.sales@emeet.com", "partnership@marketing.emeet.com"], "contact_url": "https://emeet.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=emeet%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳壹秘科技 EMEET（拥有专属独立站通道 dtc.sales@emeet.com！）", "score": 55, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Logitech Brio / Obsbot Official", "sku": "EMEET Prime Series", "prompt_zh": "“推荐一款支持 4K 自动取景、适合远程会议且美区现货 3 日达的 AI 摄像头”", "prompt_en": "“Best 4K AI auto-framing conference webcam with verified 3-day US shipping”", "spec_chip": "4K Dual-Cam / AI Focus", "report_url": "https://lufie.github.io/aco-readiness/r/emeet-com/"}, {"slug": "epomaker-com", "domain": "epomaker.com", "root_domain": "epomaker.com", "brand": "Epomaker", "hq": "深圳", "emails": ["business@epomaker.com", "marketing@epomaker.com"], "contact_url": "https://epomaker.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=epomaker%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳客制化键盘出海代表（已有 GTIN，重点切入美区 3 日达时效盾冲刺 96+ 分）", "score": 80, "mpct": 0.0, "track": "CN_CROSS_BORDER", "rival": "NuPhy / Razer Official Store", "sku": "Cherry MX Switch Set", "prompt_zh": "“推荐一款热插拔 Gasket 结构、三模无线且美区 3 日达的客制化机械键盘”", "prompt_en": "“Best tri-mode wireless hot-swappable gasket mechanical keyboard with fast US shipping”", "spec_chip": "Gasket / Hot-Swap", "report_url": "https://lufie.github.io/aco-readiness/r/epomaker-com/"}, {"slug": "jadens-com", "domain": "jadens.com", "root_domain": "jadens.com", "brand": "JADENS", "hq": "深圳/珠海", "emails": ["support@jadens.com"], "contact_url": "https://jadens.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=jadens%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳/珠海热敏打印标品独立站（美区家庭与小微商户面单高频复购）", "score": 45, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Phomemo / Brother PocketJet", "sku": "JADENS Wireless Portable Thermal Printer", "prompt_zh": "“推荐一款出差便携免墨水、支持手机蓝牙打印且美区 3 日达的热敏打印机”", "prompt_en": "“Best portable inkless Bluetooth thermal printer for travel with 3-day US shipping”", "spec_chip": "Inkless / A4+4x6", "report_url": "https://lufie.github.io/aco-readiness/r/jadens-com/"}, {"slug": "keychron-com", "domain": "keychron.com", "root_domain": "keychron.com", "brand": "Keychron", "hq": "深圳", "emails": ["support@keychron.com"], "contact_url": "https://keychron.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=keychron%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "主体：深圳渴创 Keychron（全球知名 Mac 机械键盘独立站，45/100 提升空间巨大）", "score": 45, "mpct": 100.0, "track": "CN_CROSS_BORDER", "rival": "Logitech MX / NuPhy Official", "sku": "Keychron Q1 Max QMK/VIA Wireless Keyboard", "prompt_zh": "“推荐一款原生支持 Mac 配列、铝坨坨机身且美区 3 天送达的无线机械键盘”", "prompt_en": "“Best Mac-layout QMK wireless aluminum mechanical keyboard with 3-day US delivery”", "spec_chip": "QMK/VIA / Mac+Win", "report_url": "https://lufie.github.io/aco-readiness/r/keychron-com/"}, {"slug": "ybtoner-com", "domain": "ybtoner.com", "root_domain": "ybtoner.com", "brand": "YB Toner", "hq": "California, USA", "emails": ["support@ybtoner.com"], "contact_url": "https://ybtoner.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=ybtoner%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "🔥 双店打包商机！CEO: Meilian Jiang（与 True Image 同属加州 Intercon 集团，可两站连签 $2,998）", "score": 45, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "LD Products / Brother Official", "sku": "YB Compatible Brother TN760 High-Yield Toner", "prompt_zh": "“Brother HL-L2390DW 兼容高印量带芯片硒鼓，美区 3 天内必达哪家最划算？”", "prompt_en": "“High-yield TN760 toner cartridge with chip for Brother HL-L2390DW, 3-day US shipping”", "spec_chip": "With Chip / 3,000 Pages", "report_url": "https://lufie.github.io/aco-readiness/r/ybtoner-com/"}, {"slug": "linfordoffice-com", "domain": "linfordoffice.com", "root_domain": "linfordoffice.com", "brand": "Linford Office", "hq": "California, USA", "emails": ["market@linfordoffice.com", "support@linfordoffice.com"], "contact_url": "https://linfordoffice.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=linfordoffice%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "加州兼容硒鼓标品独立站（精准兼容型号检索场景，直发 market@linfordoffice.com）", "score": 59, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "Canon Official / Staples Direct", "sku": "Linford Compatible Canon 069H Toner Cartridge 4-Pack (Black, Cyan, Magenta, Yellow) | Color imageCLASS LBP674Cdw MF753Cdw MF751Cdw", "prompt_zh": "“Canon 069H 彩色激光机全套带芯片兼容碳粉盒，支持美区极速发货推荐哪家？”", "prompt_en": "“Compatible Canon 069H 4-pack high-yield toner set with chip & 3-day US delivery”", "spec_chip": "Auto-Chip / 4-Pack", "report_url": "https://lufie.github.io/aco-readiness/r/linfordoffice-com/"}, {"slug": "trueimagetech-com", "domain": "trueimagetech.com", "root_domain": "trueimagetech.com", "brand": "True Image", "hq": "California, USA", "emails": ["sales@trueimagetech.com", "cs@trueimagetech.com"], "contact_url": "https://trueimagetech.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=trueimagetech%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "🔥 双店打包商机！CEO: Meilian Jiang（与 YB Toner 同集团，直发 sales@trueimagetech.com）", "score": 60, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "HP Official / Cartridge World", "sku": "HP Color LaserJet Pro 4301fdn Toner -  Chip-Ready Replacement HP 210A/210X Toner Set", "prompt_zh": "“HP Color LaserJet Pro 4301fdn 免拆芯片即插即用硒鼓套装，美区 3 日达推荐”", "prompt_en": "“Chip-ready replacement toner set for HP Color LaserJet Pro 4301fdn, 3-day US delivery”", "spec_chip": "210X Chip-Ready", "report_url": "https://lufie.github.io/aco-readiness/r/trueimagetech-com/"}, {"slug": "pospaper-com", "domain": "pospaper.com", "root_domain": "pospaper.com", "brand": "POS Paper", "hq": "Australia / Global", "emails": ["sales@pospaper.com", "international@pospaper.com"], "contact_url": "https://pospaper.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=pospaper%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "B2B 收银热敏纸整箱批发独立站（高客单复购，直发 sales@pospaper.com）", "score": 57, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "Uline / Thermal Paper Direct", "sku": "Epson TM-L90 Plus Printer, Ethernet", "prompt_zh": "“门店收银机急补 50 卷 BPA-Free 热敏收银纸，美区 3 天内能送到的供应商”", "prompt_en": "“50-roll case of 3-1/8 x 230ft BPA-free POS thermal receipt paper, 3-day US delivery”", "spec_chip": "BPA-Free / 3-1/8\" x 230'", "report_url": "https://lufie.github.io/aco-readiness/r/pospaper-com/"}, {"slug": "printedsolid-com", "domain": "printedsolid.com", "root_domain": "printedsolid.com", "brand": "Printed Solid", "hq": "Delaware, USA", "emails": ["sales@printedsolid.com", "support@printedsolid.com"], "contact_url": "https://www.printedsolid.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=printedsolid%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "创始人: Matthew Gorton（Prusa 旗下美国本土 3D 耗材商，直发 sales@printedsolid.com）", "score": 45, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "Bambu Lab / Hatchbox Official", "sku": "Jessie PLA 1.75mm 1kg Precision Spool", "prompt_zh": "“美国本土生产、公差 ±0.02mm 且 3 天内送达的工业级 PLA/PETG 3D 打印耗材”", "prompt_en": "“US-made 1.75mm PLA/PETG 3D filament ±0.02mm tolerance with 3-day US shipping”", "spec_chip": "1.75mm ±0.02mm", "report_url": "https://lufie.github.io/aco-readiness/r/printedsolid-com/"}, {"slug": "voxelpla-com", "domain": "voxelpla.com", "root_domain": "voxelpla.com", "brand": "VOXELPLA", "hq": "California, USA", "emails": ["support_voxelpla@voxelpla.com", "support@voxelpla.com"], "contact_url": "https://voxelpla.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=voxelpla%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "南加州高速 3D 打印耗材品牌（拓竹生态高频标品，直发 support_voxelpla@voxelpla.com）", "score": 45, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "eSUN / Bambu Official Store", "sku": "VOXELPLA Pro High-Speed 1.75mm 1kg Spool", "prompt_zh": "“适配拓竹 500mm/s 高速打印不堵头的高性价比 PLA+ 耗材，美区 3 日达”", "prompt_en": "“Best high-speed 500mm/s PLA+ filament for Bambu printers under $20 with fast US shipping”", "spec_chip": "500mm/s High-Speed", "report_url": "https://lufie.github.io/aco-readiness/r/voxelpla-com/"}, {"slug": "us-polymaker-com", "domain": "polymaker.com", "root_domain": "polymaker.com", "brand": "Polymaker", "hq": "Texas, USA", "emails": ["inquiry@polymaker.com", "support@polymaker.com"], "contact_url": "https://shop.polymaker.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=polymaker%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "知名工业级 3D 打印线材品牌美区商城（直发 inquiry@polymaker.com）", "score": 45, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "Markforged / Bambu Lab Store", "sku": "Polymaker PolyMide PA6-CF Carbon Fiber Spool", "prompt_zh": "“需要耐高温高强度尼龙碳纤 3D 打印线材，美区现货 3 天内送达哪家最稳？”", "prompt_en": "“Engineering-grade carbon fiber nylon 3D filament in stock with 3-day US delivery”", "spec_chip": "Carbon Fiber Nylon", "report_url": "https://lufie.github.io/aco-readiness/r/us-polymaker-com/"}, {"slug": "branchfurniture-com", "domain": "branchfurniture.com", "root_domain": "branchfurniture.com", "brand": "Branch", "hq": "New York, USA", "emails": ["sales@branchfurniture.com", "comms@branchfurniture.com"], "contact_url": "https://www.branchfurniture.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=branchfurniture%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "纽约网红 B2B/居家工学办公椅 DTC（直发 sales@branchfurniture.com / comms@branchfurniture.com）", "score": 45, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "Autonomous / Steelcase Direct", "sku": "Branch Ergonomic Chair Pro", "prompt_zh": "“久坐 8 小时护腰人体工学办公椅，预算 $400 内且美区一周内快速配送推荐”", "prompt_en": "“Best ergonomic mesh office chair under $400 with lumbar support & fast US shipping”", "spec_chip": "8-Point Ergo / 7yr Warranty", "report_url": "https://lufie.github.io/aco-readiness/r/branchfurniture-com/"}, {"slug": "deathwishcoffee-com", "domain": "deathwishcoffee.com", "root_domain": "deathwishcoffee.com", "brand": "Death Wish Coffee", "hq": "New York, USA", "emails": ["hey@deathwishcoffee.com"], "contact_url": "https://www.deathwishcoffee.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=deathwishcoffee%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "纽约头部高因胶囊咖啡订阅独立站（直发 hey@deathwishcoffee.com）", "score": 56, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "Peet's / Black Rifle Official", "sku": "Valhalla Java Dark Chocolate Bark", "prompt_zh": "“适合办公室茶水间提神、有机认证的高因深烘 K-Cup 胶囊咖啡，美区 3 日达”", "prompt_en": "“Strongest USDA organic dark roast K-Cup coffee pods for office with 3-day US delivery”", "spec_chip": "USDA Organic / K-Cup", "report_url": "https://lufie.github.io/aco-readiness/r/deathwishcoffee-com/"}, {"slug": "fifinemicrophone-com", "domain": "fifinemicrophone.com", "root_domain": "fifinemicrophone.com", "brand": "FIFINE", "hq": "Global DTC", "emails": ["web@fifine.cc"], "contact_url": "https://fifinemicrophone.com/pages/contact", "linkedin_url": "https://www.linkedin.com/search/results/people/?keywords=fifinemicrophone%20ecommerce%20OR%20marketing%20OR%20founder", "exec_note": "高性价比游戏直播麦克风独立站（注意真实官方邮箱为 web@fifine.cc！）", "score": 45, "mpct": 100.0, "track": "US_OVERSEAS", "rival": "HyperX QuadCast / Elgato Official", "sku": "FIFINE AmpliGame AM8 USB/XLR Dynamic Mic", "prompt_zh": "“预算 $60 内音质最好、支持一键静音的游戏与直播动圈麦克风，美区 3 日达”", "prompt_en": "“Best budget USB/XLR gaming & streaming dynamic mic under $60 with 3-day US shipping”", "spec_chip": "USB-C+XLR / RGB Mute", "report_url": "https://lufie.github.io/aco-readiness/r/fifinemicrophone-com/"}];
+    const AGENCIES = [{"id": "weswoo", "name": "西西木科技 WESWOO（深圳 · Shopify Plus 定制）", "short_name": "WESWOO 西西木", "region": "深圳", "email": "business@weswoo.com", "url": "https://www.weswoo.com", "linkedin": "https://www.linkedin.com/search/results/all/?keywords=WESWOO%20Shopify", "lang": "zh"}, {"id": "cheriscon", "name": "创意时空 Cheriscon（深圳 · Shopify Plus 官方认证）", "short_name": "创意时空", "region": "深圳", "email": "cheriscon@cheriscon.com", "url": "https://www.cheriscon.com", "linkedin": "https://www.linkedin.com/search/results/all/?keywords=Cheriscon%20Shopify", "lang": "zh"}, {"id": "adlink", "name": "艾德领客 AdLink（杭州 · Shopify Plus + 海外代投）", "short_name": "艾德领客 AdLink", "region": "杭州", "email": "marketing@iadlink.com", "url": "https://www.iadlink.com", "linkedin": "https://www.linkedin.com/search/results/all/?keywords=AdLink%20Shopify", "lang": "zh"}, {"id": "tmogroup", "name": "探谋网络 TMO Group（杭州/上海 · Shopify Plus 企业伙伴）", "short_name": "TMO Group", "region": "杭州/上海", "email": "info@tmogroup.asia", "url": "https://www.tmogroup.com.cn", "linkedin": "https://www.linkedin.com/company/tmo-group/", "lang": "zh"}, {"id": "electriceye", "name": "Electric Eye (US Columbus · Shopify Plus & CRO)", "short_name": "Electric Eye", "region": "USA", "email": "newbiz@electriceye.io", "url": "https://electriceye.io/connect", "linkedin": "https://www.linkedin.com/company/electric-eye-agency/", "lang": "en"}, {"id": "shero", "name": "Shero Commerce (US NY · Shopify Plus B2B/DTC)", "short_name": "Shero Commerce", "region": "USA", "email": "biz@sherocommerce.com", "url": "https://sherocommerce.com/contact/", "linkedin": "https://www.linkedin.com/company/shero-commerce/", "lang": "en"}, {"id": "blend", "name": "Blend Commerce (Shopify Plus Retention & AI Growth)", "short_name": "Blend Commerce", "region": "UK/US", "email": "hello@blendcommerce.com", "url": "https://blendcommerce.com/pages/contact", "linkedin": "https://www.linkedin.com/company/blend-commerce/", "lang": "en"}, {"id": "eastside", "name": "Eastside Co (Shopify Plus Premier Partner)", "short_name": "Eastside Co", "region": "UK/US", "email": "info@eastsideco.com", "url": "https://eastsideco.com/contact", "linkedin": "https://www.linkedin.com/company/eastside-co/", "lang": "en"}];
+    const CARD_BASE = "../cards/";
+    let currentSlug = BRANDS[0].slug;
+    let currentAgencyId = AGENCIES[0].id;
+    let tplLang = 'zh';
+
+    function initConsole() {
+      const sel = document.getElementById('brandSelect');
+      const pills = document.getElementById('quickBrandPills');
+      sel.innerHTML = BRANDS.map((b, i) =>
+        `<option value="${b.slug}">${i + 1}. ${b.brand} (${b.domain} · ${b.score}/100 · ${b.track === 'CN_CROSS_BORDER' ? '中国出海' : '欧美本土'})</option>`
+      ).join('');
+
+      const agSel = document.getElementById('agencySelect');
+      agSel.innerHTML = AGENCIES.map((a, i) =>
+        `<option value="${a.id}">${i + 1}. ${a.name} (${a.region} · ${a.email})</option>`
+      ).join('');
+
+      const topSlugs = ['fanttik-com', 'munbyn-com', 'bougerv-com', 'ybtoner-com', 'trueimagetech-com', 'printedsolid-com'];
+      pills.innerHTML = topSlugs.map(s => {
+        const b = BRANDS.find(x => x.slug === s);
+        if (!b) return '';
+        return `<button type="button" onclick="document.getElementById('brandSelect').value='${b.slug}'; selectBrand('${b.slug}')" class="px-2.5 py-1 rounded-lg border border-[#e4e4e7] bg-[#fafafa] hover:border-black cursor-pointer">${b.brand}</button>`;
+      }).join('');
+
+      // Sync tabs if revealed by browser Find-in-Page & keyboard arrow selection-follows-focus (modern-web-guidance: tabs)
+      for (let i = 1; i <= 4; i++) {
+        const panel = document.getElementById('panel-' + i);
+        panel.addEventListener('beforematch', () => activateTab(i));
+      }
+      const tablist = document.querySelector('.aco-tablist');
+      tablist.addEventListener('keydown', (e) => {
+        const keys = ['ArrowRight', 'ArrowLeft', 'Home', 'End'];
+        if (!keys.includes(e.key)) return;
+        e.preventDefault();
+        const cur = [1, 2, 3, 4].find(i => document.getElementById('tab-' + i).getAttribute('aria-selected') === 'true') || 1;
+        let next = cur;
+        if (e.key === 'ArrowRight') next = cur === 4 ? 1 : cur + 1;
+        if (e.key === 'ArrowLeft') next = cur === 1 ? 4 : cur - 1;
+        if (e.key === 'Home') next = 1;
+        if (e.key === 'End') next = 4;
+        activateTab(next, true);
+      });
+
+      selectAgency(AGENCIES[0].id);
+      selectBrand(BRANDS[0].slug);
+    }
+
+    function activateTab(idx, moveFocus = false) {
+      for (let i = 1; i <= 4; i++) {
+        const tab = document.getElementById('tab-' + i);
+        const panel = document.getElementById('panel-' + i);
+        const active = i === idx;
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+        tab.setAttribute('tabindex', active ? '0' : '-1');
+        tab.toggleAttribute('focusgroupstart', active);
+        if (active) {
+          panel.removeAttribute('hidden');
+          tab.scrollIntoView({ block: 'nearest', inline: 'nearest', container: 'nearest' });
+          if (moveFocus) tab.focus();
+        } else {
+          panel.setAttribute('hidden', 'until-found');
+        }
+      }
+    }
+
+    function setTplLang(lang) {
+      tplLang = lang;
+      document.getElementById('tplLangZh').className = lang === 'zh' ? 'px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer' : 'px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer';
+      document.getElementById('tplLangEn').className = lang === 'en' ? 'px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer' : 'px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer';
+      renderTemplates();
+    }
+
+    function selectAgency(agId) {
+      currentAgencyId = agId;
+      const a = AGENCIES.find(x => x.id === agId) || AGENCIES[0];
+      document.getElementById('agencyEmailLine').textContent = `已核实邮箱：${a.email}`;
+      document.getElementById('agencySiteBtn').href = a.url;
+      document.getElementById('agencyLinkedinBtn').href = a.linkedin;
+      tplLang = a.lang;
+      document.getElementById('tplLangZh').className = tplLang === 'zh' ? 'px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer' : 'px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer';
+      document.getElementById('tplLangEn').className = tplLang === 'en' ? 'px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer' : 'px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer';
+      renderTemplates();
+    }
+
+    function selectBrand(slug) {
+      currentSlug = slug;
+      const b = BRANDS.find(x => x.slug === slug) || BRANDS[0];
+      tplLang = b.track === 'CN_CROSS_BORDER' ? 'zh' : 'en';
+      document.getElementById('tplLangZh').className = tplLang === 'zh' ? 'px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer' : 'px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer';
+      document.getElementById('tplLangEn').className = tplLang === 'en' ? 'px-2.5 py-0.5 rounded bg-[#09090b] text-white font-semibold cursor-pointer' : 'px-2.5 py-0.5 rounded text-[#52525b] cursor-pointer';
+
+      const cardUrl = CARD_BASE + b.slug + '.png';
+      document.getElementById('battlecardImg').src = cardUrl;
+      document.getElementById('downloadCardBtn').href = cardUrl;
+      document.getElementById('downloadCardBtn').setAttribute('download', b.slug + '-chatgpt-audit.png');
+      document.getElementById('auditPageBtn').href = b.report_url;
+      document.getElementById('contactPageBtn').href = b.contact_url;
+      document.getElementById('linkedinSearchBtn').href = b.linkedin_url;
+      document.getElementById('hqBadge').textContent = b.hq;
+      document.getElementById('verifiedEmailsLine').textContent = '✉️ 官网已核实邮箱：' + b.emails.join('  |  ');
+      document.getElementById('execIntelLine').textContent = '👤 决策人线索：' + b.exec_note;
+
+      renderTemplates();
+    }
+
+    function renderTemplates() {
+      const b = BRANDS.find(x => x.slug === currentSlug) || BRANDS[0];
+      const a = AGENCIES.find(x => x.id === currentAgencyId) || AGENCIES[0];
+      if (tplLang === 'zh') {
+        document.getElementById('tpl1Subject').value = `实测预警：美区买家问 ChatGPT 推荐时，${b.rival} 排第1，${b.domain} 被漏推了`;
+        document.getElementById('tpl1Body').value =
+`嗨 ${b.brand} 团队，刚用美区买家视角在 ChatGPT Shopping 实测了咱们独立站（实机对比图放上面了）：搜同类词时 AI 首屏直接推了竞品【${b.rival}】，咱们家因为缺公开条码 (${b.mpct}%) 和美区 3 日达代码声明，被直接过滤出局了（当前仅 ${b.score}/100 分）。
+
+我们不动贵站网页 1 个像素、也不要后台主密码，7 天就能把咱们爆款【${b.sku}】挂进 AI 首推购买卡（贵站专属诊断页：${b.report_url} ）。
+
+我已经帮贵站跑出了这款爆款的无损补丁草稿，您回个【1】，我 24h 内免费把 Google 全绿验证图和前后对比卡发您过目，满意咱们再聊！`;
+
+        document.getElementById('tpl2Body').value =
+`补发一下咱们 ${b.domain} 的在线截流实测页：${b.report_url} —— 本周还留了 1 个免费单品打样名额，要不要我先把【${b.sku}】的 Google 全绿测试补丁发您技术/运营看一眼？0 费用、也不用给任何后台权限。`;
+
+        document.getElementById('tpl3Body').value =
+`嗨！咱们爆款【${b.sku}】的无损 AI 导购补丁已经打样好并通过 Google 官方 100% 全绿核验了（见上图，网页视觉 0 改动，条码与美区 3 日达盾牌已全部点亮）。
+
+接下来咱们有两种零风险上线方式，您看哪种顺手：
+1️⃣ Top-5 爆款极速包（¥1,980 · 48h 交付）：先把全店最赚钱的 5 款跑通，30 天内升单可 100% 全额抵扣；
+2️⃣ 全店 100 款无损全包（¥9,800 · 7天全托管 + ChatGPT/Perplexity 官方商品流代提报）：合同兜底不达 90 分全额退款，本周启动还额外免费送首月 ¥980/月 的新品同步与掉榜巡检！`;
+
+        document.getElementById('tpl4Subject').value = `合作探讨：帮 ${a.short_name} 存量 Shopify 客户白拿 AI 导购免流订单（现结 30% 分润）`;
+        document.getElementById('tpl4Body').value =
+`嗨 ${a.short_name} 商务/合作团队您好！看咱们一直在深度服务出海 Shopify 品牌，跟您聊个零研发成本帮老客户做增量、顺手拿 30% 现金分润的合作：
+
+我们刚实测了 Fanttik、MUNBYN 等 20 家独立站，发现 95% 因为“参数画在海报长图里 + 缺条码与美区时效代码”，在 ChatGPT 导购首屏正被竞品截流。
+
+我们可以作为贵司幕后的白标交付团队（不动客户网页 1 像素、7天交付、不达90分全退）：您只需挑 3 个存量客户域名发我，我 24h 内免费帮您做好专属《竞品截流对比图 + 实测页》供您发给客户破冰；每成一单当日现结 30% 佣金（¥2,940/单）+ 后续包月护航 25% 长期分成。
+
+分润测算器与流程：https://lufie.github.io/aco-readiness/partners/ ，要不要先免费发我 3 个客户域名出份报告试试水？`;
+      } else {
+        document.getElementById('tpl1Subject').value = `ChatGPT Shopping ranks ${b.rival} #1 over ${b.domain} (screenshot attached)`;
+        document.getElementById('tpl1Body').value =
+`Hi ${b.brand} team — I just ran a live US buyer prompt on ChatGPT Shopping for your category (screenshot attached): ${b.rival} took the #1 direct buy card while ${b.domain} was filtered out (${b.score}/100 — missing ${b.mpct}% public GTINs + US 3-day SLA schema).
+
+We fix this to 96/100 in 7 days via 1 standalone snippet with zero pixel changes and zero admin passwords (your live visual audit: ${b.report_url} ).
+
+Reply "1" and I'll send over a 100% free live proof patch for "${b.sku}" within 24h so your team can verify it on Google's official validator before paying a dime.`;
+
+        document.getElementById('tpl2Body').value =
+`Quick bump with your live ChatGPT Shopping audit (${b.report_url}) — want me to send over the free 1-SKU proof patch for "${b.sku}" so your team can test it risk-free (no admin access needed)?`;
+
+        document.getElementById('tpl3Body').value =
+`Good news — your custom zero-UI ACO patch for "${b.sku}" just passed 100% green on Google's Rich Results validator (proof attached — 0 pixel changes to your theme, GTIN & US 3-day SLA verified).
+
+Two zero-risk ways to roll this out across ${b.domain}:
+1) $299 Top-5 SKU Speed Pack (48h): Live on your top 5 revenue SKUs, 100% credited if you upgrade within 30 days.
+2) $1,499 Full 100-SKU Turnkey (7d): Full catalog poster OCR + OpenAI/Perplexity Merchant Feed onboarding — backed by a 90+ score refund guarantee, plus Month 1 of our $149/mo ACO Care (new-SKU sync & rank guard) included FREE.
+
+Which option works best for your team this week?`;
+
+        document.getElementById('tpl4Subject').value = `30% rev-share + 3 free ChatGPT Shopping audits for ${a.short_name} clients`;
+        document.getElementById('tpl4Body').value =
+`Hi ${a.short_name} team — saw your agency scales Shopify Plus DTC brands and wanted to share a zero-lift 30% upfront + 25% recurring MRR add-on your clients are asking about right now.
+
+Over 90% of Shopify stores get filtered out of ChatGPT & Perplexity Shopping cards due to missing GTINs, poster-locked specs, and absent US SLA schema. We fix stores to 96/100 in 7 days white-label via 1 standalone snippet (0 theme edits, 90+ score or full refund).
+
+Send me 3 client domains and I'll build custom Competitor Hijack Battlecards + live audit URLs for free within 24h so you can pitch them effortlessly ($450 instant payout per store + 25% ongoing MRR). Commission calculator here: https://lufie.github.io/aco-readiness/partners/ — open to testing 3 client stores free?`;
+      }
+      syncMailtoLinks();
+    }
+
+    function syncMailtoLinks() {
+      const b = BRANDS.find(x => x.slug === currentSlug) || BRANDS[0];
+      const a = AGENCIES.find(x => x.id === currentAgencyId) || AGENCIES[0];
+      const toBrand = b.emails.join(',');
+      const subj1 = document.getElementById('tpl1Subject').value;
+      document.getElementById('tpl1Mailto').href = `mailto:${toBrand}?subject=${encodeURIComponent(subj1)}&body=${encodeURIComponent(document.getElementById('tpl1Body').value)}`;
+      document.getElementById('tpl2Mailto').href = `mailto:${toBrand}?subject=${encodeURIComponent('Re: ' + subj1)}&body=${encodeURIComponent(document.getElementById('tpl2Body').value)}`;
+      document.getElementById('tpl3Mailto').href = `mailto:${toBrand}?subject=${encodeURIComponent('[Google Verified Proof] ' + b.domain)}&body=${encodeURIComponent(document.getElementById('tpl3Body').value)}`;
+      const subj4 = document.getElementById('tpl4Subject').value;
+      document.getElementById('tpl4Mailto').href = `mailto:${a.email}?subject=${encodeURIComponent(subj4)}&body=${encodeURIComponent(document.getElementById('tpl4Body').value)}`;
+    }
+
+    function copyText(id, btn) {
+      const el = document.getElementById(id);
+      navigator.clipboard.writeText(el.value).then(() => {
+        const old = btn.textContent;
+        btn.textContent = '✓ 已复制 Copied!';
+        setTimeout(() => btn.textContent = old, 1500);
+      });
+    }
+
+    initConsole();
+  </script>
+</body>
+</html>
